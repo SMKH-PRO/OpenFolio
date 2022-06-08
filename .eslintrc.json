@@ -8,6 +8,8 @@
     "plugin:react/recommended",
     "plugin:@next/next/recommended",
     "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
     "prettier",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
@@ -35,7 +37,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-      "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+      "react/jsx-filename-extension": [1, { "extensions": [ ".tsx"] }],
 
     "prettier/prettier": [
       "error",
@@ -44,7 +46,6 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",
     // defaultProps rule to be deprecated on function components
     // https://github.com/reactjs/rfcs/pull/107
