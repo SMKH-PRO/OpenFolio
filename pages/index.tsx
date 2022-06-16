@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import About from "../components/about";
 import Header from "../components/header";
+import Portfolio from "../components/portfolio/index";
 
 const Home: NextPage = () => (
   <div>
@@ -14,6 +15,7 @@ const Home: NextPage = () => (
     <main>
       <Header />
       <About />
+      <Portfolio />
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>

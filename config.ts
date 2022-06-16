@@ -1,48 +1,35 @@
-import { ElementType } from "react";
-import LinkedinIcon from "./components/svgs/linkedinIcon";
-import GithubIcon from "./components/svgs/githubIcon";
-import FBIcon from "./components/svgs/fbIcon";
-import youtubeIcon from "./components/svgs/youtubeIcon";
-import TwitterIcon from "./components/svgs/twitterIcon";
-import StackoverflowIcon from "./components/svgs/stackoverflowIcon";
-
-type SocialMediaType = {
-  name: string;
-  Svg: ElementType;
-  link: string;
-  className?: string;
-};
+import type { SocialMediaType } from "./config.types";
 
 export const socialMedia: SocialMediaType[] = [
   {
-    name: "LinkedIn",
-    Svg: LinkedinIcon,
+    title: "Connect with me on linkedin",
+    fontAwesome: "linkedin", // https://fontawesome.com/v6/icons?s=brands
     link: "https://linkedin.com/in/kashanhaider",
+    className: "heartbeatAnimation",
   },
   {
-    name: "Github",
-    Svg: GithubIcon,
+    title: "Github",
+    fontAwesome: "github",
     link: "https://github.com/smkh-pro",
   },
   {
-    name: "Facebook",
-    Svg: FBIcon,
+    title: "Facebook",
+    fontAwesome: "facebook",
     link: "https://www.facebook.com/SMKH.PRO",
-    className: "p-4",
   },
   {
-    name: "Youtube",
-    Svg: youtubeIcon,
+    title: "Youtube",
+    fontAwesome: "youtube",
     link: "https://youtube.com/smkh-pro",
   },
   {
-    name: "Twitter",
-    Svg: TwitterIcon,
+    title: "Twitter",
+    fontAwesome: "twitter",
     link: "#",
   },
   {
-    name: "Stackoverflow",
-    Svg: StackoverflowIcon,
+    title: "Stackoverflow",
+    fontAwesome: "stack-overflow",
     link: "https://stackoverflow.com/users/9877416/kashan-haider",
   },
 ];

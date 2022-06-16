@@ -1,12 +1,15 @@
 import { ElementType } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 type Props = {
   className?: string;
-  Svg: ElementType;
+  Svg: ElementType | null;
+  fontAwesome: IconName;
   title?: string;
 };
 
-const IconButton = ({ Svg, title, className }: Props) => (
+const IconButton = ({ Svg, title, className, fontAwesome }: Props) => (
   <button
     title={title}
     className={`
@@ -29,11 +32,19 @@ const IconButton = ({ Svg, title, className }: Props) => (
     `}
     type="button"
   >
-    <Svg
-      pathProps={{
-        className: `fill-primary-700 group-hover:fill-white`,
-      }}
-    />
+    {Svg ? (
+      <Svg
+        pathProps={{
+          className: `fill-primary-700 group-hover:fill-white transition-all  duration-500 ease-out
+          `,
+        }}
+      />
+    ) : (
+      <FontAwesomeIcon
+        className="text-primary-700 group-hover:text-white     transition-all  duration-500 ease-out"
+        icon={["fab", fontAwesome]}
+      />
+    )}
   </button>
 );
 

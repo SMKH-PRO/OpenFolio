@@ -31,3 +31,31 @@
     position: absolute;
 
 }
+
+
+.heartbeatAnimation {
+    animation: paddingKumZiada 500ms linear infinite;
+
+
+}
+
+@keyframes paddingKumZiada {
+    0% {
+        padding: 0rem
+    }
+
+    20% {
+        padding: 0.75rem
+    }
+
+
+
+    60% {
+        padding: 1rem
+    }
+
+
+    100% {
+        padding: 0rem
+    }
+}

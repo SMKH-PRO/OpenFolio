@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Container from "../container";
 import { socialMedia } from "../../config";
 import IconButton from "../buttons/iconButton";
@@ -21,7 +20,6 @@ const About = () => (
       <h1 className="font-bold text-5xl max-w-[400px] mt-3">
         I design web and mobile apps
       </h1>
-      <FontAwesomeIcon className="text-primary-500" icon={["fab", "google"]} />
 
       <p className="text-slate-500 mt-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui
@@ -39,15 +37,18 @@ const About = () => (
         tempor.
       </p>
       <div className="flex mt-8">
-        {socialMedia?.map((social, i) => (
-          <a href={social.link} target="_blank" rel="noreferrer">
+        {socialMedia?.map(({ link, title, className, svg, fontAwesome }, i) => (
+          <a href={link} target="_blank" rel="noreferrer">
             <IconButton
-              title={social.name}
+              title={title}
               className={`
               ${i !== 0 ? "ml-5 " : ""}
-              ${social?.className || "p-3"}
+              ${className || "p-3"}
               `}
-              Svg={social.Svg}
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              Svg={svg}
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              fontAwesome={fontAwesome}
             />
           </a>
         ))}
@@ -55,7 +56,7 @@ const About = () => (
     </div>
 
     <div className="flex w-full mt-32 md:flex-wrap sm:flex-wrap lg:flex-nowrap  ">
-      <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all mt-[-50px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
+      <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all lg:mt-[-80px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
         <div className="transition-all duration-1000 ease-out  mt-[-50px] ">
           <CardWrapper title="Node JS">
             <NodeJSIcon
