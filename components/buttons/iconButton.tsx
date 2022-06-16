@@ -12,7 +12,6 @@ const IconButton = ({ Svg, title, className }: Props) => (
     className={`
     w-[50px] 
     h-[50px] 
-    p-4  
     flex 
     justify-center 
     items-center 
@@ -20,17 +19,19 @@ const IconButton = ({ Svg, title, className }: Props) => (
     border-primary-100 
     rounded
     hover:bg-primary-500
+    active:bg-primary-800
     hover:border-none
     hover:shadow-lg
     transition-all  duration-1000 ease-out
     group
-    ${className || ""}
+    ${className || "p-3"}
+    
     `}
     type="button"
   >
     <Svg
       pathProps={{
-        className: "fill-primary-700 group-hover:fill-white",
+        className: `fill-primary-700 group-hover:fill-white`,
       }}
     />
   </button>

@@ -10,6 +10,7 @@ type SocialMediaType = {
   name: string;
   Svg: ElementType;
   link: string;
+  className?: string;
 };
 
 export const socialMedia: SocialMediaType[] = [
@@ -27,6 +28,7 @@ export const socialMedia: SocialMediaType[] = [
     name: "Facebook",
     Svg: FBIcon,
     link: "https://www.facebook.com/SMKH.PRO",
+    className: "p-4",
   },
   {
     name: "Youtube",

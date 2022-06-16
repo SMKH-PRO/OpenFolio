@@ -4,24 +4,23 @@ type Props = {
   children: ReactNode;
   className?: string;
   shadow?: string;
-  color?: string;
-  colorClass?: string | null;
+  colorClass?: string | null | undefined;
 };
 
-const Button = ({ children, color, colorClass, className, shadow }: Props) => {
+const Button = ({ children, colorClass, className, shadow }: Props) => {
   const cClass =
     colorClass ||
     `
-     bg-${color || "primary"}-500
-     active:bg-${color || "primary"}-800
-     hover:bg-${color || "primary"}-600 
+    bg-primary-500
+    active:bg-primary-800
+     hover:bg-primary-600 
    `;
+  console.log("colorClass", cClass);
   return (
     <button
       type="button"
       className={`
      ${cClass}
-     
      text-white
      font-bold
      py-2
@@ -42,6 +41,5 @@ const Button = ({ children, color, colorClass, className, shadow }: Props) => {
 
 Button.defaultProps = {
   shadow: "lg",
-  color: "primary",
 };
 export default Button;

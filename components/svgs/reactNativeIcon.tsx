@@ -15,10 +15,9 @@ const ReactNativeIcon = ({ pathProps, className }: Props) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    width="120px"
-    height="120px"
     viewBox="0 0 70.29 122.88"
     xmlSpace="preserve"
+    height="100px"
   >
     <g>
       <path

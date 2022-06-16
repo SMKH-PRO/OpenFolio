@@ -13,16 +13,30 @@ const CardWrapper = ({ children, className, title, titleClass }: Props) => (
     className={`
   
   bg-white
-  hover:bg-primary-200
+  hover:bg-primary-100
   ml-1
   m-10
  
- w-[250px] h-[240px]
   
   hover:m-5
   shadow-[0_25px_60px_-17px_rgba(0,0,0,0.1)]
   hover:shadow-md
-  hover:w-[260px] hover:h-[250px]
+  
+
+
+  md:w-[240px] 
+  md:h-[230px]
+
+  sm:w-[200px] 
+  sm:h-[190px]
+
+
+  md:hover:w-[250px] 
+  md:hover:h-[240px]
+
+  sm:hover:w-[210px] 
+  sm:hover:h-[200px]
+
   rounded-lg
   flex items-center justify-center
   transition-all  duration-1000 ease-out
@@ -32,7 +46,7 @@ bg-opacity-80
    ${className || ""}`}
   >
     <CircleShape className="top-0 right-0 group-hover:visible invisible absolute" />
-    <div>
+    <div className="flex justify-center items-center flex-col">
       {children}
       <p
         className={`

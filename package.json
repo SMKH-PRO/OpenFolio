@@ -11,6 +11,8 @@
     "pre-commit": "npm run lint -- --fix && git add ."
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "animate.css": "^4.1.1",
     "next": "12.1.6",
     "react": "18.1.0",

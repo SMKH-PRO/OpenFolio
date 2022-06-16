@@ -10,7 +10,9 @@ const Container = ({ children, paddingClass, className, ...props }: Props) => (
   // This component helps maintaining proper space from left/right
   <div
     {...props}
-    className={`lg:container mx-auto ${paddingClass || ""} ${className || ""}`}
+    className={`md:container lg:container mx-auto ${paddingClass || ""} 
+    ${className || ""}
+    `}
   >
     {children}
   </div>
