@@ -12,7 +12,8 @@
     "airbnb/hooks",
     "prettier",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/jsx-runtime"
   ],
   "parserOptions": {
     "project": "./tsconfig.json",
@@ -24,6 +25,7 @@
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
+    "import",
     "react",
     "prettier",
     "@typescript-eslint"
@@ -54,6 +56,13 @@
       {
         "ignoreFunctionalComponents": true
       }
-    ]
+    ],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "hrefLeft", "hrefRight" ],
+      "aspects": [ "invalidHref", "preferButton" ]
+    }],
+    "@typescript-eslint/no-unsafe-argument": "warn"
+
   }
 }
