@@ -37,18 +37,15 @@ const About = () => (
         tempor.
       </p>
       <div className="flex mt-8">
-        {socialMedia?.map(({ link, title, className, svg, fontAwesome }, i) => (
+        {socialMedia?.map(({ link, className, ...options }, i) => (
           <a href={link} target="_blank" rel="noreferrer">
             <IconButton
-              title={title}
               className={`
               ${i !== 0 ? "ml-5 " : ""}
               ${className || "p-3"}
               `}
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-              Svg={svg}
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-              fontAwesome={fontAwesome}
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              {...options}
             />
           </a>
         ))}
