@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Container from "../container";
 import { socialMedia } from "../../config";
 import IconButton from "../buttons/iconButton";
@@ -21,8 +20,9 @@ const About = () => (
       <h4 className="font-bold text-primary-700 text-2xl">ABOUT ME</h4>
       <h1 className="font-bold text-5xl max-w-[400px] mt-3">
         I design web and mobile apps
-        <FontAwesomeIcon icon={"check-square" as IconProp} />
       </h1>
+      <FontAwesomeIcon className="text-primary-500" icon={["fab", "google"]} />
+
       <p className="text-slate-500 mt-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui
         ligula, malesuada vel convallis in, tincidunt ut mi Vestibulum sit amet.
