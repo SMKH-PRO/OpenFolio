@@ -8,10 +8,12 @@ import "swiper/css/scrollbar";
 
 import type { AppProps } from "next/app";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import NavMenu from "../components/nav";
 
-library.add(fab);
+library.add(fab, fas);
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <NavMenu />

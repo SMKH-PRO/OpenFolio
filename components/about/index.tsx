@@ -38,7 +38,8 @@ const About = () => (
       </p>
       <div className="flex mt-8">
         {socialMedia?.map(({ link, className, ...options }, i) => (
-          <a href={link} target="_blank" rel="noreferrer">
+          // eslint-disable-next-line react/no-array-index-key
+          <a key={`${link}_${i}`} href={link} target="_blank" rel="noreferrer">
             <IconButton
               className={`
               ${i !== 0 ? "ml-5 " : ""}
@@ -53,7 +54,7 @@ const About = () => (
     </div>
 
     <div className="flex w-full mt-32 md:flex-wrap sm:flex-wrap lg:flex-nowrap  ">
-      <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all lg:mt-[-80px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
+      <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all lg:mt-[-50px] xl:mt-[-80px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
         <div className="transition-all duration-1000 ease-out  mt-[-50px] ">
           <CardWrapper title="Node JS">
             <NodeJSIcon
@@ -127,7 +128,7 @@ const About = () => (
           semper tempor.
         </p>
 
-        <Button className="mt-16">
+        <Button className="mt-10 xl:mt-16">
           Download CV
           <DownloadIcon color="white" className="ml-2" />
         </Button>

@@ -3,14 +3,28 @@
 @tailwind utilities;
 
 
-[title] {
-    position: relative;
-}
 
 .swiper-pagination-bullet,
 .swiper-button-next,
 .swiper-button-prev {
-    --swiper-theme-color: black;
+    --swiper-theme-color: white;
+}
+
+.swiper-pagination-bullet {
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 30% !important;
+    background: white !important;
+}
+
+
+
+
+[title] {
+    position: relative;
 }
 
 [title]:hover::after {

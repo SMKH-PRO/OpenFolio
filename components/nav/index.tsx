@@ -62,7 +62,10 @@ const NavMenu = () => {
 
             <ul className="block md:flex">
               {paths.map((path) => (
-                <li className="lg:mx-6 md:mx-4 mx-2 my-4 md:my-0 animate__animated animate__faster animate__fadeInDown">
+                <li
+                  key={path.href}
+                  className="lg:mx-6 md:mx-4 mx-2 my-4 md:my-0 animate__animated animate__faster animate__fadeInDown"
+                >
                   <Link href={path.href}>
                     <a
                       className={`${

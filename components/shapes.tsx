@@ -33,7 +33,7 @@ const shapes = () => (
   <div>
     <DesignLines />
     {shapesArr.map((shape) => (
-      <span className={shape.className}>
+      <span key={shape.src} className={shape.className}>
         <Image
           loading="lazy"
           alt="shape"
