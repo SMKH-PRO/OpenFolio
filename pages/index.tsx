@@ -3,6 +3,7 @@ import Head from "next/head";
 import About from "../components/about";
 import Header from "../components/header";
 import Portfolio from "../components/portfolio/index";
+import Experience from "../components/experience";
 
 const Home: NextPage = () => (
   <div>
@@ -16,6 +17,7 @@ const Home: NextPage = () => (
       <Header />
       <About />
       <Portfolio />
+      <Experience />
     </main>
 
     {/* <footer className={styles.footer}>
