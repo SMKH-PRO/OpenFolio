@@ -29,9 +29,13 @@ const shapesArr: Shapes[] = [
     className: styles.element5,
   },
 ];
-const shapes = () => (
+
+type Props = {
+  noLine?: boolean;
+};
+const shapes = ({ noLine }: Props) => (
   <div>
-    <DesignLines />
+    {!noLine && <DesignLines className="mt-20 left-[-66px] top-0" />}
     {shapesArr.map((shape) => (
       <span key={shape.src} className={shape.className}>
         <Image

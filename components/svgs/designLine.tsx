@@ -12,7 +12,7 @@ const DesignLine = ({ color, className }: Props) => (
     viewBox="0 0 410 1029"
     id="sauce-drip-outline"
     data-shape="true"
-    className={`absolute mt-20 left-[-66px] top-0 z-[-1] ${className || ""}`}
+    className={`absolute z-[-1] ${className || ""}`}
   >
     <path
       fill="none"
