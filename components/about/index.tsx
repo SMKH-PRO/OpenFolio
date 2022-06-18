@@ -15,7 +15,7 @@ import JestIcon from "../svgs/jestIcon";
 
 const About = () => (
   <Container className="mt-48 flex justify-between flex-wrap">
-    <div className=" md:basis-full sm:basis-full  lg:basis-1/2 pr-20">
+    <div className=" md:basis-full sm:basis-full basis-full  lg:basis-1/2 lg:pr-20">
       <h4 className="font-bold text-primary-700 text-2xl">ABOUT ME</h4>
       <h1 className="font-bold text-5xl max-w-[400px] mt-3">
         I design web and mobile apps
@@ -53,7 +53,7 @@ const About = () => (
       </div>
     </div>
 
-    <div className="flex w-full mt-32 md:flex-wrap sm:flex-wrap lg:flex-nowrap  ">
+    <div className="flex w-full mt-32 flex-wrap md:flex-wrap sm:flex-wrap lg:flex-nowrap  ">
       <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all lg:mt-[-50px] xl:mt-[-80px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
         <div className="transition-all duration-1000 ease-out  mt-[-50px] ">
           <CardWrapper title="Node JS">
@@ -88,7 +88,7 @@ const About = () => (
           </CardWrapper>
         </div>
       </div>
-      <div className=" lg:basis-1/2 md:basis-full sm:basis-full">
+      <div className=" lg:basis-1/2 basis-full md:basis-full sm:basis-full">
         <h4 className="text-primary-800 font-bold text-xl">MY SKILLS</h4>
         <h1 className="font-bold text-5xl max-w-[600px] mt-3">
           I Enjoy Solving Problems With Scalable Solutions

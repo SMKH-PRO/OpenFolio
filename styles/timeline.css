@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+  .timeline-content {
+    width: 90%;
+    float: right;
+  }
+
+  .timeline-content:before, .timeline-content.right:before {
+    left: 10%;
+    margin-left: -6px;
+    border-left: 0;
+   
+  }
+
+  .timeline-icon {
+    left: 0;
+  }
+}

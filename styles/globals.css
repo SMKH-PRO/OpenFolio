@@ -2,7 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+.josefinSans {
+    font-family: JosefinSans;
+}
 
+@font-face {
+    font-family: JosefinSans;
+    src: url(/assets/fonts/JosefinSans.ttf);
+}
+
+/* @font-face {
+    font-family: Varela;
+    src: url(/assets/fonts/Varela.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(/assets/fonts/Raleway.ttf);
+}
+
+
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(/assets/fonts/LeagueSpartan.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/assets/fonts/Montserrat.ttf);
+} */
 
 .swiper-pagination-bullet,
 .swiper-button-next,
