@@ -43,8 +43,6 @@ const Carousel = () => (
           spaceBetween: 20,
         },
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       {new Array(6).fill(5).map((a, i) => (
         // eslint-disable-next-line react/no-array-index-key

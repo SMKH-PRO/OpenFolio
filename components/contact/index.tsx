@@ -32,39 +32,18 @@ const Contact = () => {
         </div>
         <form className="mt-10" onSubmit={formik.handleSubmit}>
           <div className="flex justify-between ">
-            <Input
-              className="m-2 ml-0"
-              type="text"
-              placeholder="Name"
-              onChange={console.log}
-            />
-            <Input
-              className="m-2 mr-0"
-              type="text"
-              placeholder="Email"
-              onChange={console.log}
-            />
+            <Input className="m-2 ml-0" type="text" placeholder="Name" />
+            <Input className="m-2 mr-0" type="text" placeholder="Email" />
           </div>
           <div className="flex justify-between ">
-            <Input
-              className="m-2 ml-0"
-              type="text"
-              placeholder="Phone"
-              onChange={console.log}
-            />
+            <Input className="m-2 ml-0" type="text" placeholder="Phone" />
             <Input
               className="m-2 mr-0"
               type="text"
               placeholder="Company (Optional)"
-              onChange={console.log}
             />
           </div>
-          <Input
-            className="my-2"
-            type="text"
-            placeholder="Subject"
-            onChange={console.log}
-          />
+          <Input className="my-2" type="text" placeholder="Subject" />
           <Textarea
             className=" mt-4"
             rows={4}
