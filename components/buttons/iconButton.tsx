@@ -1,7 +1,6 @@
 import { ElementType } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
-
 type Props = {
   className?: string;
   Svg?: ElementType | null;
