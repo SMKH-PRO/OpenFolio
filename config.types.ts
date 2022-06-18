@@ -14,6 +14,16 @@ type WithIcon = {
 };
 
 type SocialMediaType = (WithSvg | WithIcon) & SocialMedia; // Icon or SVG, one or the other is required.
-export type { SocialMediaType };
+type IntroSectionType = {
+  display: boolean,
+  greetingMessage: string,
+  name: string,
+  professionPrefix: string,
+  profession: string,
+  description: string,
+  imageLink: string,
+  namesArr: string[]
+}
+export type { SocialMediaType, IntroSectionType };
 
 export default {};

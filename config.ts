@@ -1,4 +1,4 @@
-import type { SocialMediaType } from "./config.types";
+import type { SocialMediaType, IntroSectionType } from "./config.types";
 
 export const socialMedia: SocialMediaType[] = [
   {
@@ -33,5 +33,23 @@ export const socialMedia: SocialMediaType[] = [
     link: "https://stackoverflow.com/users/9877416/kashan-haider",
   },
 ];
+
+
+// SECTION 1
+export const introSection: IntroSectionType = {
+  display: true,
+  greetingMessage: "Hi There 👋 I am",
+  name: "Elon Musk",
+  professionPrefix: "Professional",
+  profession: "Software Engineer",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum consequat convallis Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean interdum consequat convallis.",
+  imageLink: "",
+  namesArr: [
+    "Elon Musk",
+    "Software Engineer",
+    "Passionate Programmer",
+    "Entreprenuer",
+  ]
+}
 
 export default {};
