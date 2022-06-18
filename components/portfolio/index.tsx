@@ -5,10 +5,19 @@ import Image from "next/image";
 import Container from "../container";
 import styles from "../../styles/portfolio.module.css";
 import IconButton from "../buttons/iconButton";
+import Shapes from "../shapes";
 
 const Portfolio = () => (
   <div className="bg-primary-100  bg-opacity-[0.15] mt-32 relative">
+    <Shapes noLine />
     <span className="absolute top-0 left-0 drop-shadow-[0_0_2px_black]">
+      <Image
+        src="/assets/images/shapes/dotted-design.png"
+        width={300}
+        height={300}
+      />
+    </span>
+    <span className="absolute bottom-0 rotate-[180deg] right-0 drop-shadow-[0_0_2px_black]">
       <Image
         src="/assets/images/shapes/dotted-design.png"
         width={300}
