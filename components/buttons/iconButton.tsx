@@ -1,8 +1,7 @@
 import { ElementType } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
-
-type Props = {
+type Props = {// testing ci flow
   className?: string;
   Svg?: ElementType | null;
   fontAwesome?: IconName;
