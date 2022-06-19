@@ -13,17 +13,20 @@ const Header = () => (
         <HeaderRight />
       </div>
       <div className="lg:basis-1/2  md:basis-none sm:basis-full">
-        <p className="text-primary-900">{introSection?.greetingMessage}</p>
+        <p className="text-primary-900">{introSection.greetingMessage}</p>
         <h2 className="mt-3 text-6xl font-extrabold transition-all  duration-1000 ease-out">
-          {introSection?.name}
+          {introSection.name}
         </h2>
         <p className="text-2xl mt-3 ">
-          <span className="text-slate-400">{introSection?.professionPrefix}</span> {"  "}
+          <span className="text-slate-400">
+            {introSection.professionPrefix}
+          </span>{" "}
+          {"  "}
           {"  "}
           <span className="font-bold text-primary-800">Software Enginer</span>
         </p>
         <p className="lg:max-w-[550px] md:max-w-[600px] mt-8 ">
-          {introSection?.description}
+          {introSection.description}
         </p>
         <div className="flex mt-10">
           <Button

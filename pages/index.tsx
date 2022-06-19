@@ -15,7 +15,7 @@ const Home: NextPage = () => (
     </Head>
 
     <main>
-      {introSection?.display && <Header />}
+      {introSection.display && <Header />}
       <About />
       <Portfolio />
       <Experience />
