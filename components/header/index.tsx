@@ -1,6 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../buttons/button";
 import Container from "../container";
-import ArrowRightIcon from "../svgs/arrowRightIcon";
 import Shapes from "../shapes";
 import HeaderRight from "./header-right";
 import { introSection } from "../../config";
@@ -29,23 +29,36 @@ const Header = () => (
           {introSection.description}
         </p>
         <div className="flex mt-10">
-          <Button
-            colorClass={`
+          {introSection.viewPortfolioButton.display && (
+            <Button
+              colorClass={`
         bg-zinc-800
         active:bg-zinc-900
         hover:bg-zinc-700
        `}
-            className="uppercase"
-          >
-            View Portfolio
-          </Button>
+              className="uppercase flex justify-center items-center"
+            >
+              {introSection.viewPortfolioButton.text}
+              {introSection.viewPortfolioButton.fontAwesome && (
+                <FontAwesomeIcon
+                  className="ml-3 w-[16px]"
+                  icon={["fas", introSection.viewPortfolioButton.fontAwesome]}
+                />
+              )}
+            </Button>
+          )}
 
-          <Button className="ml-5 uppercase">
-            Hire Me
-            <span className="ml-3">
-              <ArrowRightIcon color="white" />
-            </span>
-          </Button>
+          {introSection.hireMeButton.display && (
+            <Button className="ml-5 uppercase flex justify-center items-center">
+              {introSection.hireMeButton.text}
+              {introSection.hireMeButton.fontAwesome && (
+                <FontAwesomeIcon
+                  className="ml-3 w-[16px]"
+                  icon={["fas", introSection.hireMeButton.fontAwesome]}
+                />
+              )}
+            </Button>
+          )}
         </div>
       </div>
       <div className="md:basis-1/2  sm:basis-none relative  items-center justify-center hidden sm:hidden md:hidden lg:flex">

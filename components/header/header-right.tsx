@@ -8,6 +8,7 @@ const HeaderRight = () => (
       src={introSection.imageLink || "/assets/images/hacker.jpg"}
       width={350}
       height={320}
+      objectFit="contain"
     />
     <div className="flex justify-between items-center mt-3">
       <p className="font-semibold text-primary-800 text-2xl">[</p>

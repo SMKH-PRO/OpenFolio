@@ -14,16 +14,31 @@ type WithIcon = {
 };
 
 type SocialMediaType = (WithSvg | WithIcon) & SocialMedia; // Icon or SVG, one or the other is required.
+
+type HireMeButtonType = {
+  display: boolean;
+  text: string;
+  fontAwesome?: IconName;
+};
+
+type ViewPortfolioButtonType = {
+  display: boolean;
+  text: string;
+  fontAwesome?: IconName;
+};
+
 type IntroSectionType = {
-  display: boolean,
-  greetingMessage: string,
-  name: string,
-  professionPrefix: string,
-  profession: string,
-  description: string,
-  imageLink: string,
-  namesArr: string[]
-}
+  display: boolean;
+  greetingMessage: string;
+  name: string;
+  professionPrefix: string;
+  profession: string;
+  description: string;
+  imageLink: string;
+  namesArr: string[];
+  hireMeButton: HireMeButtonType;
+  viewPortfolioButton: ViewPortfolioButtonType;
+};
 export type { SocialMediaType, IntroSectionType };
 
 export default {};
