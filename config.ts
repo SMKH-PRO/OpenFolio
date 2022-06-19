@@ -2,6 +2,7 @@ import type {
   IconButtonType,
   IntroSectionType,
   AboutSectionType,
+  ContactSectionType,
 } from "./config.types";
 import ReactNativeIcon from "./components/svgs/reactNativeIcon";
 import TypescriptIcon from "./components/svgs/typescriptIcon";
@@ -130,6 +131,16 @@ export const introSection: IntroSectionType = {
     text: "Hire Me",
     fontAwesome: "arrow-right", // optional
   },
+};
+
+// CONTACT SECTION
+
+export const contactSection: ContactSectionType = {
+  display: true,
+  title: "Contact Me",
+  heading: "HAVE A PROJECT IN MIND?",
+  description:
+    "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
 };
 
 export default {};
