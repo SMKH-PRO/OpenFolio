@@ -1,4 +1,4 @@
-import type { IconButtonType } from "./config.types";
+import type { IconButtonType, IntroSectionType } from "./config.types";
 import ReactNativeIcon from "./components/svgs/reactNativeIcon";
 import TypescriptIcon from "./components/svgs/typescriptIcon";
 import MongoDBIcon from "./components/svgs/mongoDBIcon";
@@ -91,4 +91,32 @@ export const aboutSection = {
     heading: "I Enjoy Solving Problems With Scalable Solutions",
   },
 };
+// SECTION 1
+export const introSection: IntroSectionType = {
+  display: true,
+  greetingMessage: "Hi There 👋 I am",
+  name: "Elon Musk",
+  professionPrefix: "Professional",
+  profession: "Software Engineer",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum consequat convallis Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean interdum consequat convallis.",
+  imageLink: "/assets/images/hacker.jpg",
+  namesArr: [
+    "Elon Musk",
+    "Software Engineer",
+    "Passionate Programmer",
+    "Entreprenuer",
+  ],
+  hireMeButton: {
+    display: true,
+    text: "Hire Me",
+    fontAwesome: "arrow-right", // optional
+  },
+  viewPortfolioButton: {
+    display: true,
+    text: "View Portfolio",
+    // fontAwesome: "arrow-right", // optional
+  },
+};
+
 export default {};

@@ -4,6 +4,7 @@ import About from "../components/about";
 import Header from "../components/header";
 import Portfolio from "../components/portfolio/index";
 import Experience from "../components/experience";
+import { introSection } from "../config";
 import Contact from "../components/contact/index";
 
 const Home: NextPage = () => (
@@ -15,7 +16,7 @@ const Home: NextPage = () => (
     </Head>
 
     <main>
-      <Header />
+      {introSection.display && <Header />}
       <About />
       <Portfolio />
       <Experience />
