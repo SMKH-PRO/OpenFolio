@@ -1,5 +1,5 @@
 import Container from "../container";
-import { socialMedia } from "../../config";
+
 import IconButton from "../buttons/iconButton";
 import Button from "../buttons/button";
 import CardWrapper from "./cardWrapper";
@@ -8,10 +8,12 @@ import MongoDBIcon from "../svgs/mongoDBIcon";
 import ReactIcon from "../svgs/reactIcon";
 import ReactNativeIcon from "../svgs/reactNativeIcon";
 import DownloadIcon from "../svgs/downloadIcon";
-import NextIcon from "../svgs/nextIcon";
-import TypescriptIcon from "../svgs/typescriptIcon";
-import ElectronIcon from "../svgs/electronIcon";
-import JestIcon from "../svgs/jestIcon";
+import { aboutSection } from "../../config";
+
+const {
+  connectWithMe: { socialMedia },
+  mySkills: { skills },
+} = aboutSection;
 
 const About = () => (
   <Container className="mt-48 flex justify-between flex-wrap">
@@ -36,13 +38,18 @@ const About = () => (
         urna placerat, tempor soloa demanium testi lor Aliq lorem vitae semper
         tempor.
       </p>
-      <div className="flex mt-8">
+      <div className="flex mt-6 flex-wrap">
         {socialMedia?.map(({ link, className, ...options }, i) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <a key={`${link}_${i}`} href={link} target="_blank" rel="noreferrer">
+          <a // eslint-disable-next-line react/no-array-index-key
+            key={`${link || ""}_${i}`}
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconButton
               className={`
-              ${i !== 0 ? "ml-5 " : ""}
+              m-1 mt-0
+              
               ${className || "p-3"}
               `}
               // eslint-disable-next-line react/jsx-props-no-spreading
@@ -94,32 +101,10 @@ const About = () => (
           I Enjoy Solving Problems With Scalable Solutions
         </h1>
         <div className="mt-5 flex flex-wrap ml-[-10px]">
-          <IconButton title="Node.JS" className="p-1.5 m-3" Svg={NodeJSIcon} />
-          <IconButton
-            title="Typescript"
-            className="p-1.5 m-3"
-            Svg={TypescriptIcon}
-          />
-
-          <IconButton title="React.JS" className="p-1.5 m-3" Svg={ReactIcon} />
-          <IconButton
-            title="React Native Mobile Apps"
-            className="p-3 m-3 "
-            Svg={ReactNativeIcon}
-          />
-          <IconButton title="MongoDB" className="p-1.5 m-3" Svg={MongoDBIcon} />
-
-          <IconButton title="Next.JS" className="p-1.5 m-3" Svg={NextIcon} />
-          <IconButton
-            title="Electron.JS"
-            className="p-2 m-3"
-            Svg={ElectronIcon}
-          />
-          <IconButton
-            title="Unit Testing, Jest, Cypress etc."
-            className="p-2 m-3"
-            Svg={JestIcon}
-          />
+          {skills.map(({ className, ...options }) => (
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            <IconButton className={className || "p-1.5 m-3"} {...options} />
+          ))}
         </div>
         <p className="mt-5 text-slate-500 lg:max-w-[620px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui

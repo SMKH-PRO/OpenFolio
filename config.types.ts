@@ -1,19 +1,20 @@
 import { ElementType } from "react";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
+import { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
 
-type SocialMedia = {
+type IconsForButton = {
   title: string;
-  link: string;
+  link?: string;
   className?: string;
 };
 type WithSvg = {
-  svg: ElementType;
+  Svg: ElementType;
 };
 type WithIcon = {
   fontAwesome: IconName;
+  fontAwesomeType?: IconPrefix;
 };
 
-type SocialMediaType = (WithSvg | WithIcon) & SocialMedia; // Icon or SVG, one or the other is required.
-export type { SocialMediaType };
+type IconButtonType = (WithSvg | WithIcon) & IconsForButton; // Icon or SVG, one or the other is required.
+export type { IconButtonType };
 
 export default {};

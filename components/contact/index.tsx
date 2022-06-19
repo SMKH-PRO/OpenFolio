@@ -45,6 +45,7 @@ const Contact = () => {
           </div>
           <Input className="my-2" type="text" placeholder="Subject" />
           <Textarea
+            readOnly
             className=" mt-4"
             rows={4}
             value="Still underconstruction!"
