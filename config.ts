@@ -89,6 +89,12 @@ export const aboutSection = {
     skills,
     title: "My Skills",
     heading: "I Enjoy Solving Problems With Scalable Solutions",
+    btn: {
+      text: "Download CV",
+      display: true,
+    },
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui ligula, malesuada vel convallis in, tincidunt ut mi. Vestibulum sit amet urna placerat, tempor soloa demanium testi lor Aliq lorem vitae semper tempor.",
   },
 };
 // SECTION 1
@@ -107,15 +113,16 @@ export const introSection: IntroSectionType = {
     "Passionate Programmer",
     "Entreprenuer",
   ],
-  hireMeButton: {
-    display: true,
-    text: "Hire Me",
-    fontAwesome: "arrow-right", // optional
-  },
-  viewPortfolioButton: {
+
+  btn1: {
     display: true,
     text: "View Portfolio",
     // fontAwesome: "arrow-right", // optional
+  },
+  btn2: {
+    display: true,
+    text: "Hire Me",
+    fontAwesome: "arrow-right", // optional
   },
 };
 

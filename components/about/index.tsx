@@ -10,33 +10,27 @@ import ReactNativeIcon from "../svgs/reactNativeIcon";
 import DownloadIcon from "../svgs/downloadIcon";
 import { aboutSection } from "../../config";
 
-const {
-  connectWithMe: { socialMedia },
-  mySkills: { skills },
-} = aboutSection;
-
+const { connectWithMe, mySkills } = aboutSection;
+const { skills } = mySkills;
+const { socialMedia } = connectWithMe;
 const About = () => (
   <Container className="mt-48 flex justify-between flex-wrap">
     <div className=" md:basis-full sm:basis-full basis-full  lg:basis-1/2 lg:pr-20">
-      <h4 className="font-bold text-primary-700 text-2xl">ABOUT ME</h4>
+      <h4 className="font-bold text-primary-700 text-2xl uppercase">
+        {aboutSection.title}
+      </h4>
       <h1 className="font-bold text-5xl max-w-[400px] mt-3">
-        I design web and mobile apps
+        {aboutSection.heading}
       </h1>
 
-      <p className="text-slate-500 mt-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui
-        ligula, malesuada vel convallis in, tincidunt ut mi Vestibulum sit amet.
-      </p>
+      <p className="text-slate-500 mt-6">{aboutSection.description}</p>
     </div>
     <div className=" sm:basis-full md:basis-full lg:basis-1/2 sm:mt-20 md:mt-0">
       <h1 className="font-600 text-3xl uppercase mt-3 md:mt-10">
-        Connect with me
+        {connectWithMe.title}
       </h1>
       <p className="text-slate-500 mt-6 max-w-[630px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui
-        ligula, malesuada vel convallis in, tincidunt ut mi. Vestibulum sit amet
-        urna placerat, tempor soloa demanium testi lor Aliq lorem vitae semper
-        tempor.
+        {connectWithMe.description}
       </p>
       <div className="flex mt-6 flex-wrap">
         {socialMedia?.map(({ link, className, ...options }, i) => (
@@ -96,9 +90,11 @@ const About = () => (
         </div>
       </div>
       <div className=" lg:basis-1/2 basis-full md:basis-full sm:basis-full">
-        <h4 className="text-primary-800 font-bold text-xl">MY SKILLS</h4>
+        <h4 className="text-primary-800 font-bold text-xl uppercase">
+          {mySkills.title}
+        </h4>
         <h1 className="font-bold text-5xl max-w-[600px] mt-3">
-          I Enjoy Solving Problems With Scalable Solutions
+          {mySkills.heading}
         </h1>
         <div className="mt-5 flex flex-wrap ml-[-10px]">
           {skills.map(({ className, ...options }, i) => (
@@ -111,16 +107,15 @@ const About = () => (
           ))}
         </div>
         <p className="mt-5 text-slate-500 lg:max-w-[620px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui
-          ligula, malesuada vel convallis in, tincidunt ut mi. Vestibulum sit
-          amet urna placerat, tempor soloa demanium testi lor Aliq lorem vitae
-          semper tempor.
+          {mySkills.description}
         </p>
 
-        <Button className="mt-10 xl:mt-16">
-          Download CV
-          <DownloadIcon color="white" className="ml-2" />
-        </Button>
+        {mySkills.btn.display && (
+          <Button className="mt-10 xl:mt-16">
+            {mySkills.btn.text}
+            <DownloadIcon color="white" className="ml-2" />
+          </Button>
+        )}
       </div>
     </div>
   </Container>

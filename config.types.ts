@@ -16,13 +16,7 @@ type WithIcon = {
 
 type IconButtonType = (WithSvg | WithIcon) & IconsForButton; // Icon or SVG, one or the other is required.
 
-type HireMeButtonType = {
-  display: boolean;
-  text: string;
-  fontAwesome?: IconName;
-};
-
-type ViewPortfolioButtonType = {
+type IntroSectBtnType = {
   display: boolean;
   text: string;
   fontAwesome?: IconName;
@@ -37,8 +31,8 @@ type IntroSectionType = {
   description: string;
   imageLink: string;
   namesArr: string[];
-  hireMeButton: HireMeButtonType;
-  viewPortfolioButton: ViewPortfolioButtonType;
+  btn1: IntroSectBtnType;
+  btn2: IntroSectBtnType;
 };
 export type { IntroSectionType, IconButtonType };
 

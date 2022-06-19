@@ -29,7 +29,7 @@ const Header = () => (
           {introSection.description}
         </p>
         <div className="flex mt-10">
-          {introSection.viewPortfolioButton.display && (
+          {introSection.btn1.display && (
             <Button
               colorClass={`
         bg-zinc-800
@@ -38,23 +38,23 @@ const Header = () => (
        `}
               className="uppercase flex justify-center items-center"
             >
-              {introSection.viewPortfolioButton.text}
-              {introSection.viewPortfolioButton.fontAwesome && (
+              {introSection.btn1.text}
+              {introSection.btn1.fontAwesome && (
                 <FontAwesomeIcon
                   className="ml-3 w-[16px]"
-                  icon={["fas", introSection.viewPortfolioButton.fontAwesome]}
+                  icon={["fas", introSection.btn1.fontAwesome]}
                 />
               )}
             </Button>
           )}
 
-          {introSection.hireMeButton.display && (
+          {introSection.btn2.display && (
             <Button className="ml-5 uppercase flex justify-center items-center">
-              {introSection.hireMeButton.text}
-              {introSection.hireMeButton.fontAwesome && (
+              {introSection.btn2.text}
+              {introSection.btn2.fontAwesome && (
                 <FontAwesomeIcon
                   className="ml-3 w-[16px]"
-                  icon={["fas", introSection.hireMeButton.fontAwesome]}
+                  icon={["fas", introSection.btn2.fontAwesome]}
                 />
               )}
             </Button>
