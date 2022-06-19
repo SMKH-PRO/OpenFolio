@@ -279,7 +279,7 @@ export const footerSection: FooterSectionType = {
   display: true,
   socialMedia: socialMedia.slice(1, 5),
   bioData: {
-    display: true,
+    display: false,
     name: "Kashan Haider",
     email: "contact@KashanHaider.com",
     phone: "+1 (567)-257-8716",
