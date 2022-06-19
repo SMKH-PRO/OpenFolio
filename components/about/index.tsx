@@ -101,9 +101,13 @@ const About = () => (
           I Enjoy Solving Problems With Scalable Solutions
         </h1>
         <div className="mt-5 flex flex-wrap ml-[-10px]">
-          {skills.map(({ className, ...options }) => (
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            <IconButton className={className || "p-1.5 m-3"} {...options} />
+          {skills.map(({ className, ...options }, i) => (
+            <IconButton
+              key={`${options.title}_${i}`}
+              className={className || "p-1.5 m-3"}
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              {...options}
+            />
           ))}
         </div>
         <p className="mt-5 text-slate-500 lg:max-w-[620px]">

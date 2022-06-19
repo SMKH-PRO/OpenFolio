@@ -47,6 +47,7 @@
         "endOfLine": "auto"
       }
     ],
+    "react/no-array-index-key":"off",
     "react/react-in-jsx-scope": "off",
     "react/forbid-prop-types": "off",
     // defaultProps rule to be deprecated on function components
