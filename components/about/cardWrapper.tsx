@@ -21,11 +21,16 @@ const CardWrapper = ({ children, className, title, titleClass }: Props) => (
   hover:m-5
   shadow-[0_25px_60px_-17px_rgba(0,0,0,0.1)]
   hover:shadow-md
-  
+
+  h-[150px]
+  w-[160px]
+  hover:w-[170px] 
+  hover:h-[160px]
 
 
   md:w-[240px] 
   md:h-[230px]
+
 
   sm:w-[200px] 
   sm:h-[190px]

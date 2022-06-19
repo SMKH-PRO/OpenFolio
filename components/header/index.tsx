@@ -48,7 +48,7 @@ const Header = () => (
           </Button>
         </div>
       </div>
-      <div className="md:basis-1/2  sm:basis-none relative flex items-center justify-center sm:hidden md:hidden lg:flex">
+      <div className="md:basis-1/2  sm:basis-none relative  items-center justify-center hidden sm:hidden md:hidden lg:flex">
         <HeaderRight />
       </div>
     </Container>

@@ -15,7 +15,7 @@ const Button = ({ children, colorClass, className, shadow }: Props) => {
     active:bg-primary-800
      hover:bg-primary-600 
    `;
-  console.log("colorClass", cClass);
+
   return (
     <button
       type="button"
