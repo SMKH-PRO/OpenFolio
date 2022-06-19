@@ -16,7 +16,7 @@ const Contact = () => {
     },
   });
   return (
-    <div>
+    <div id="contact">
       <Container>
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold text-primary-500 text-center">

@@ -5,7 +5,10 @@ import Shapes from "../shapes";
 import Carousel from "./carousel";
 
 const Portfolio = () => (
-  <div className="bg-primary-100  bg-opacity-[0.15] mt-32 relative">
+  <div
+    id="portfolio"
+    className="bg-primary-100  bg-opacity-[0.15] mt-32 relative"
+  >
     <Shapes noLine />
     <span className="absolute top-0 left-0 drop-shadow-[0_0_2px_black]">
       <Image

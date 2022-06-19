@@ -6,13 +6,21 @@ type IconsForButton = {
   link?: string;
   className?: string;
 };
-type WithSvg = {
+
+type FeaturedSkillElem = {
+  title: string;
+  className?: string;
+  titleClass?: string;
+};
+export type WithSvg = {
   Svg: ElementType;
 };
-type WithIcon = {
+export type WithIcon = {
   fontAwesome: IconName;
   fontAwesomeType?: IconPrefix;
 };
+
+type FeaturedSkillType = (WithSvg | WithIcon) & FeaturedSkillElem;
 
 type IconButtonType = (WithSvg | WithIcon) & IconsForButton; // Icon or SVG, one or the other is required.
 
@@ -35,6 +43,10 @@ type IntroSectionType = {
   btn1: BtnType;
   btn2: BtnType;
 };
+type FeaturedSkillsType = [
+  [FeaturedSkillType, FeaturedSkillType],
+  [FeaturedSkillType, FeaturedSkillType]
+];
 
 type AboutSectionType = {
   title: string;
@@ -46,6 +58,7 @@ type AboutSectionType = {
     socialMedia: IconButtonType[];
   };
   mySkills: {
+    featuredSkills: FeaturedSkillsType;
     skills: IconButtonType[];
     title: string;
     heading: string;
@@ -53,6 +66,12 @@ type AboutSectionType = {
     description: string;
   };
 };
-export type { IntroSectionType, IconButtonType, AboutSectionType };
+
+export type {
+  IntroSectionType,
+  IconButtonType,
+  AboutSectionType,
+  FeaturedSkillsType,
+};
 
 export default {};

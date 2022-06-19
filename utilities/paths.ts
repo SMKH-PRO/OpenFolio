@@ -1,8 +1,8 @@
-export const homePath = "/";
-export const aboutPath = "/about";
-export const servicesPath = "/services";
-export const portfolioPath = "/portfolio";
-export const contactPath = "/contact";
+export const homePath = "/#home";
+export const aboutPath = "/#about";
+export const servicesPath = "/#services";
+export const portfolioPath = "/#portfolio";
+export const contactPath = "/#contact";
 
 type Path = {
   href: string;

@@ -4,18 +4,37 @@ import Container from "../container";
 import IconButton from "../buttons/iconButton";
 import Button from "../buttons/button";
 import CardWrapper from "./cardWrapper";
-import NodeJSIcon from "../svgs/nodeJSIcon";
-import MongoDBIcon from "../svgs/mongoDBIcon";
-import ReactIcon from "../svgs/reactIcon";
-import ReactNativeIcon from "../svgs/reactNativeIcon";
+
 import { aboutSection } from "../../config";
 
 const { connectWithMe, mySkills } = aboutSection;
-const { skills } = mySkills;
+const { skills, featuredSkills } = mySkills;
 const { socialMedia } = connectWithMe;
+const FeaturedSkillCards = (array: typeof featuredSkills[0]) =>
+  array.map((d) => (
+    <CardWrapper titleClass={d.titleClass} title={d.title}>
+      {"Svg" in d && (
+        <d.Svg
+          pathProps={{
+            className: d?.className || " group-hover:fill-white",
+          }}
+        />
+      )}
+
+      {"fontAwesome" in d && (
+        <FontAwesomeIcon
+          className={d.className || "group-hover:text-white"}
+          icon={[d.fontAwesomeType || "fab", d.fontAwesome]}
+        />
+      )}
+    </CardWrapper>
+  ));
 const About = () => (
   <Container className="mt-48 flex justify-between flex-wrap">
-    <div className=" md:basis-full sm:basis-full basis-full  lg:basis-1/2 lg:pr-20">
+    <div
+      id="about"
+      className=" md:basis-full sm:basis-full basis-full  lg:basis-1/2 lg:pr-20"
+    >
       <h4 className="font-bold text-primary-700 text-2xl uppercase">
         {aboutSection.title}
       </h4>
@@ -57,23 +76,12 @@ const About = () => (
     <div className="flex w-full mt-32 flex-wrap md:flex-wrap sm:flex-wrap lg:flex-nowrap  ">
       <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all lg:mt-[-50px] xl:mt-[-80px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
         <div className="transition-all duration-1000 ease-out  mt-[-50px] ">
-          <CardWrapper title="Node JS">
-            <NodeJSIcon
-              pathProps={{
-                className: " group-hover:fill-white fill-primary-500",
-              }}
-            />
-          </CardWrapper>
-          <CardWrapper title="MongoDB">
-            <MongoDBIcon
-              pathProps={{
-                className: " group-hover:fill-white ",
-              }}
-            />
-          </CardWrapper>
+          {FeaturedSkillCards(featuredSkills[0])}
         </div>
         <div>
-          <CardWrapper title="React.JS">
+          {FeaturedSkillCards(featuredSkills[1])}
+
+          {/* <CardWrapper title="React.JS">
             <ReactIcon
               pathProps={{
                 className: " group-hover:fill-white ",
@@ -86,7 +94,7 @@ const About = () => (
                 className: " group-hover:fill-white ",
               }}
             />
-          </CardWrapper>
+          </CardWrapper> */}
         </div>
       </div>
       <div className=" lg:basis-1/2 basis-full md:basis-full sm:basis-full">
@@ -115,7 +123,10 @@ const About = () => (
             {mySkills.btn.text}
             <FontAwesomeIcon
               className="ml-3 w-[15px]"
-              icon={["fas", "file-download"]}
+              icon={[
+                mySkills.btn.fontAwesomeType || "fas",
+                mySkills.btn.fontAwesome || "file-download",
+              ]}
             />
           </Button>
         )}

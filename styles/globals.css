@@ -32,6 +32,12 @@
     src: url(/assets/fonts/Montserrat.ttf);
 } */
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
 .swiper-pagination-bullet,
 .swiper-button-next,
 .swiper-button-prev {

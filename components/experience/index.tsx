@@ -2,7 +2,7 @@ import Container from "../container";
 import Timeline from "./timeline";
 
 const Experience = () => (
-  <div>
+  <div id="experience">
     <Container className="mt-32 flex flex-col justify-center items-center">
       <p className="text-primary-800 font-bold text-center text-xl">
         Education & Experience

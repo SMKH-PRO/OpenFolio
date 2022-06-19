@@ -5,8 +5,8 @@ import Shapes from "../shapes";
 import HeaderRight from "./header-right";
 import { introSection } from "../../config";
 
-const Header = () => (
-  <div className="relative   sm:mt-[-50px] md:mt-20 ">
+const Introduction = () => (
+  <div id="home" className="relative   sm:mt-[-50px] md:mt-20 ">
     <Shapes />
     <Container className="flex space-between  flex-wrap justify-center">
       <div className="basis-full relative flex items-center justify-center lg:hidden mb-20 ">
@@ -19,10 +19,8 @@ const Header = () => (
         </h2>
         <p className="text-2xl mt-3 ">
           <span className="text-slate-400">
-            {introSection.professionPrefix}
-          </span>{" "}
-          {"  "}
-          {"  "}
+            {`${introSection.professionPrefix} `}
+          </span>
           <span className="font-bold text-primary-800">Software Enginer</span>
         </p>
         <p className="lg:max-w-[550px] md:max-w-[600px] mt-8 ">
@@ -71,4 +69,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Introduction;

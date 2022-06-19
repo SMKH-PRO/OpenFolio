@@ -2,6 +2,7 @@ import type {
   IconButtonType,
   IntroSectionType,
   AboutSectionType,
+  FeaturedSkillsType,
 } from "./config.types";
 import ReactNativeIcon from "./components/svgs/reactNativeIcon";
 import TypescriptIcon from "./components/svgs/typescriptIcon";
@@ -77,6 +78,34 @@ const skills: IconButtonType[] = [
   },
 ];
 
+const featuredSkills: FeaturedSkillsType = [
+  [
+    {
+      fontAwesome: "node-js",
+      // fontAwesomeType:"fab", //you can define font-awesome category such as fab for font-awesome brands category,  by default its "fab" in this object
+      title: "Node JS",
+      className: "group-hover:text-white text-primary-500",
+      titleClass: "mt-2",
+    },
+    {
+      Svg: MongoDBIcon,
+      title: "MongoDB",
+    },
+  ],
+  [
+    {
+      fontAwesome: "react",
+      title: "React JS",
+      className: "group-hover:text-white text-primary-500",
+      titleClass: "mt-2",
+    },
+    {
+      Svg: ReactNativeIcon,
+      title: "React Native",
+      titleClass: "mt-2",
+    },
+  ],
+];
 export const aboutSection: AboutSectionType = {
   title: "About Me",
   heading: "I design web and mobile apps",
@@ -90,6 +119,7 @@ export const aboutSection: AboutSectionType = {
     socialMedia,
   },
   mySkills: {
+    featuredSkills,
     skills,
     title: "My Skills",
     heading: "I Enjoy Solving Problems With Scalable Solutions",
