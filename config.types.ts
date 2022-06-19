@@ -53,6 +53,19 @@ type AboutSectionType = {
     description: string;
   };
 };
-export type { IntroSectionType, IconButtonType, AboutSectionType };
+
+type ContactSectionType = {
+  display: boolean;
+  title: string;
+  heading?: string;
+  description?: string;
+};
+
+export type {
+  IntroSectionType,
+  IconButtonType,
+  AboutSectionType,
+  ContactSectionType,
+};
 
 export default {};
