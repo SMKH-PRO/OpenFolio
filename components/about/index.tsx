@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Container from "../container";
 
 import IconButton from "../buttons/iconButton";
@@ -7,7 +8,6 @@ import NodeJSIcon from "../svgs/nodeJSIcon";
 import MongoDBIcon from "../svgs/mongoDBIcon";
 import ReactIcon from "../svgs/reactIcon";
 import ReactNativeIcon from "../svgs/reactNativeIcon";
-import DownloadIcon from "../svgs/downloadIcon";
 import { aboutSection } from "../../config";
 
 const { connectWithMe, mySkills } = aboutSection;
@@ -111,9 +111,12 @@ const About = () => (
         </p>
 
         {mySkills.btn.display && (
-          <Button className="mt-10 xl:mt-16">
+          <Button className="mt-10 xl:mt-16 flex justify-center items-center">
             {mySkills.btn.text}
-            <DownloadIcon color="white" className="ml-2" />
+            <FontAwesomeIcon
+              className="ml-3 w-[15px]"
+              icon={["fas", "file-download"]}
+            />
           </Button>
         )}
       </div>

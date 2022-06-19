@@ -16,10 +16,11 @@ type WithIcon = {
 
 type IconButtonType = (WithSvg | WithIcon) & IconsForButton; // Icon or SVG, one or the other is required.
 
-type IntroSectBtnType = {
+type BtnType = {
   display: boolean;
   text: string;
   fontAwesome?: IconName;
+  fontAwesomeType?: IconPrefix;
 };
 
 type IntroSectionType = {
@@ -31,8 +32,8 @@ type IntroSectionType = {
   description: string;
   imageLink: string;
   namesArr: string[];
-  btn1: IntroSectBtnType;
-  btn2: IntroSectBtnType;
+  btn1: BtnType;
+  btn2: BtnType;
 };
 export type { IntroSectionType, IconButtonType };
 

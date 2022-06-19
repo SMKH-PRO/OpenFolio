@@ -92,6 +92,8 @@ export const aboutSection = {
     btn: {
       text: "Download CV",
       display: true,
+      fontAwesome: "file-download",
+      fontAwesomeType: "fas",
     },
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui ligula, malesuada vel convallis in, tincidunt ut mi. Vestibulum sit amet urna placerat, tempor soloa demanium testi lor Aliq lorem vitae semper tempor.",
