@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { contactSection } from "../../config";
 import Button from "../buttons/button";
 import Container from "../container";
 import Input from "./input";
@@ -20,15 +21,18 @@ const Contact = () => {
       <Container>
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold text-primary-500 text-center">
-            Contact Me
+            {contactSection.title}
           </h2>
-          <h1 className="mt-5 font-bold text-4xl josefinSans uppercase text-center">
-            Have a project in mind?
-          </h1>
-          <p className="text-slate-500 max-w-[570px] mt-2 text-center">
-            There are many variations of passages of Lorem Ipsum available but
-            the majority have suffered alteration in some form.
-          </p>
+          {contactSection?.heading && (
+            <h1 className="mt-5 font-bold text-4xl josefinSans uppercase text-center">
+              {contactSection.heading}
+            </h1>
+          )}
+          {contactSection?.description && (
+            <p className="text-slate-500 max-w-[570px] mt-2 text-center">
+              {contactSection.description}
+            </p>
+          )}
         </div>
         <form className="mt-10" onSubmit={formik.handleSubmit}>
           <div className="flex justify-between ">

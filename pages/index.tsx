@@ -4,7 +4,7 @@ import About from "../components/about";
 import Introduction from "../components/introduction";
 import Portfolio from "../components/portfolio/index";
 import Experience from "../components/experience";
-import { introSection } from "../config";
+import { contactSection, introSection } from "../config";
 import Contact from "../components/contact/index";
 
 const Home: NextPage = () => (
@@ -24,8 +24,12 @@ const Home: NextPage = () => (
       <Portfolio />
       <Experience />
       <div className="w-full border-t border-primary-100 my-20" />
-      <Contact />
-      <div className="w-full border-t border-primary-100 my-24" />
+      {contactSection.display && (
+        <div>
+          <Contact />
+          <div className="w-full border-t border-primary-100 my-24" />
+        </div>
+      )}
       <h1 className="text-center text-4xl josefinSans">UNDER CONSTRUCTION</h1>
       <p className="text-center">
         This open source portfolio is still undercontruction, To get updates
