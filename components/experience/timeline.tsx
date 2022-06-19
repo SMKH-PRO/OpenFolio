@@ -1,20 +1,7 @@
+import { experienceSection } from "../../config";
 import TimelineItem from "./timelineItem";
-/**
- * 
- *  @media screen and (max-width: 768px) {
-  #timeline {
-    margin: 30px;
-    padding: 0px;
-    width: 90%;
-  }
 
-  #timeline:before {
-    left: 0;
-  }
-
- 
-}
- */
+const { experiences } = experienceSection;
 const Timeline = () => (
   <div className="container">
     <div
@@ -52,9 +39,14 @@ const Timeline = () => (
 
        "
     >
-      <TimelineItem />
-      <TimelineItem right />
-      <TimelineItem />
+      {experiences.map((options, i) => (
+        <TimelineItem
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          {...options}
+          key={`${options.title}_${i}`}
+          right={i % 2 !== 0}
+        />
+      ))}
     </div>
   </div>
 );

@@ -4,6 +4,10 @@ import type {
   AboutSectionType,
   FeaturedSkillsType,
   ContactSectionType,
+  PortfolioSectionType,
+  ExperienceSectionType,
+  FooterSectionType,
+  GeneralInfoType,
 } from "./config.types";
 import ReactNativeIcon from "./components/svgs/reactNativeIcon";
 import TypescriptIcon from "./components/svgs/typescriptIcon";
@@ -108,6 +112,7 @@ const featuredSkills: FeaturedSkillsType = [
   ],
 ];
 export const aboutSection: AboutSectionType = {
+  display: true,
   title: "About Me",
   heading: "I design web and mobile apps",
   description:
@@ -171,6 +176,123 @@ export const contactSection: ContactSectionType = {
   heading: "HAVE A PROJECT IN MIND?",
   description:
     "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+};
+
+export const portfolioSection: PortfolioSectionType = {
+  display: true,
+  title: "Creative Work",
+  heading: "Recent Projects",
+  projects: [
+    {
+      title: "Mobile UI Design",
+      description:
+        "Dolar repellendus temporibus Dolar repellendus temporibus Dolar repellendus temporibus Dolar repellendus temporibus Dolar repellendus temporibus Dolar repellendus temporibus...",
+      image: "/assets/images/portfolio/portfolio-1.jpg",
+    },
+    {
+      title: "Mobile UI Design",
+      description: "Dolar repellendus temporibus...",
+      image: "/assets/images/portfolio/portfolio-2.jpg",
+    },
+    {
+      title: "Mobile UI Design",
+      description: "Dolar repellendus temporibus...",
+      image: "/assets/images/portfolio/portfolio-3.jpg",
+    },
+    {
+      title: "Mobile UI Design",
+      description: "Dolar repellendus temporibus...",
+      image: "/assets/images/portfolio/portfolio-4.jpg",
+    },
+    {
+      title: "Mobile UI Design",
+      description: "Dolar repellendus temporibus...",
+      image: "/assets/images/portfolio/portfolio-5.jpg",
+    },
+    {
+      title: "Mobile UI Design",
+      description: "Dolar repellendus temporibus...",
+      image: "/assets/images/portfolio/portfolio-6.jpg",
+    },
+  ],
+};
+
+export const experienceSection: ExperienceSectionType = {
+  display: true,
+  title: "Education & Experience",
+  heading: "My Resume",
+  description:
+    "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+
+  experiences: [
+    {
+      title: "Software Engineer III",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+      org: "Google",
+      location: "New York",
+      fromYear: "2021",
+      toYear: "Present",
+    },
+    {
+      title: "Software Engineer II",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+      org: "Airbnb",
+      orgLink: "https://www.airbnb.com/",
+      location: "Remote",
+      fromYear: "2020",
+      toYear: "2021",
+    },
+    {
+      title: "Software Engineer I",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+      org: "Nextflix",
+      location: "Pakistan",
+      fromYear: "2018",
+      toYear: "2019",
+    },
+    {
+      title: "Software Engineer I",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+      org: "Meta",
+      location: "Singapore",
+      fromYear: "2017",
+      toYear: "2018",
+    },
+    {
+      title: "Bachelor's Degree",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+      org: "University Of London",
+      orgLink: "https://london.ac.uk/",
+      location: "Remote",
+      fromYear: "2021",
+      toYear: "2024",
+    },
+  ],
+};
+
+export const footerSection: FooterSectionType = {
+  display: true,
+  socialMedia: socialMedia.slice(1, 5),
+  bioData: {
+    display: true,
+    name: "Kashan Haider",
+    email: "Contact@KashanHaider.com",
+    phone: "+1 (567)-257-8716",
+  },
+};
+
+export const generalInfo: GeneralInfoType = {
+  projectName: "OpenFolio",
+  seoTitle: "OpenFolio - Portfolio for everyone.",
+  seoDescription:
+    "OpenFolio - an open source portfolio project for developers, designers and everyone",
+  projectLogo: "/assets/images/avatar.png",
+  resumeURL: "https://mutualfilesharing.com/UploadedFiles/exampleResume.pdf",
 };
 
 export default {};

@@ -88,11 +88,15 @@ html {
 
 
 .heartbeatAnimation {
-    animation: paddingKumZiada 500ms linear infinite;
+    animation: paddingKumZiada 700ms linear infinite;
 
 
 }
+.slowHeartbeatAnimation {
+    animation: paddingKumZiada 1200ms linear infinite;
 
+
+}
 @keyframes paddingKumZiada {
     0% {
         padding: 0rem

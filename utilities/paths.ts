@@ -1,6 +1,6 @@
 export const homePath = "/#home";
 export const aboutPath = "/#about";
-export const servicesPath = "/#services";
+export const experiencePath = "/#experience";
 export const portfolioPath = "/#portfolio";
 export const contactPath = "/#contact";
 
@@ -19,8 +19,8 @@ const paths: Path[] = [
     title: "About",
   },
   {
-    href: servicesPath,
-    title: "Services",
+    href: experiencePath,
+    title: "Experience",
   },
   {
     href: portfolioPath,

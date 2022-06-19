@@ -5,7 +5,8 @@ import IconButton from "../buttons/iconButton";
 import Button from "../buttons/button";
 import CardWrapper from "./cardWrapper";
 
-import { aboutSection } from "../../config";
+import { aboutSection, generalInfo } from "../../config";
+import Link from "next/link";
 
 const { connectWithMe, mySkills } = aboutSection;
 const { skills, featuredSkills } = mySkills;
@@ -119,16 +120,20 @@ const About = () => (
         </p>
 
         {mySkills.btn.display && (
-          <Button className="mt-10 xl:mt-16 flex justify-center items-center">
-            {mySkills.btn.text}
-            <FontAwesomeIcon
-              className="ml-3 w-[15px]"
-              icon={[
-                mySkills.btn.fontAwesomeType || "fas",
-                mySkills.btn.fontAwesome || "file-download",
-              ]}
-            />
-          </Button>
+          <Link href={generalInfo.resumeURL} download target="_blank">
+            <a target="_blank" download>
+              <Button className="mt-10 xl:mt-16 flex justify-center items-center">
+                {mySkills.btn.text}
+                <FontAwesomeIcon
+                  className="ml-3 w-[15px]"
+                  icon={[
+                    mySkills.btn.fontAwesomeType || "fas",
+                    mySkills.btn.fontAwesome || "file-download",
+                  ]}
+                />
+              </Button>
+            </a>
+          </Link>
         )}
       </div>
     </div>

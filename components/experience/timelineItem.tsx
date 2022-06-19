@@ -1,10 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { ExperienceType } from "../../config.types";
 
-type Props = {
+interface Props extends ExperienceType {
   right?: boolean;
-};
+}
 
-const timelineItem = ({ right }: Props) => (
+const timelineItem = ({
+  right,
+  title,
+  toYear,
+  fromYear,
+  description,
+  org,
+  orgLink,
+  location,
+}: Props) => (
   <div
     className="
      timeline-item
@@ -83,10 +94,11 @@ const timelineItem = ({ right }: Props) => (
         font-bold
         "
       >
-        Software Engineer I
+        {title}
       </h2>
-      <h3
-        className="
+      {(org || location) && (
+        <h3
+          className="
        text-2xl
        md:text-2xl
        sm:text-xl
@@ -96,25 +108,34 @@ const timelineItem = ({ right }: Props) => (
        mt-2
        pl-[1px]
        "
-      >
-        Google Inc | Remote
-      </h3>
+        >
+          {orgLink ? (
+            <Link href={orgLink}>
+              <a className="underline hover:text-primary-800">{org || ""}</a>
+            </Link>
+          ) : (
+            org || ""
+          )}
+          {org && location ? " | " : ""} {location || ""}
+        </h3>
+      )}
 
-      <div
-        className={`mt-2 flex w-full ${
-          right
-            ? "justify-start"
-            : "justify-end md:justify-end sm:justify-start"
-        }`}
-      >
-        <div className="bg-primary-400 p-1.5 px-4 w-44 font-bold text-white rounded-lg  flex justify-around">
-          <p>2018</p> - <p>2020</p>
+      {toYear && fromYear && (
+        <div
+          className={`mt-2 flex w-full ${
+            right
+              ? "justify-start"
+              : "md:justify-end lg:justify-end xl:justify-end   sm:justify-start justify-start"
+          }`}
+        >
+          <div className="bg-primary-400 p-1.5 px-4 w-44 font-bold text-white rounded-lg  flex justify-around">
+            <p>{fromYear}</p> - <p>{toYear}</p>
+          </div>
         </div>
-      </div>
-      <p className="pl-[1px] mt-3 text-slate-500">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis
-        quo maiores magnam modi ab libero praesentium blanditiis.
-      </p>
+      )}
+      {description && (
+        <p className="pl-[1px] mt-3 text-slate-500">{description}</p>
+      )}
     </div>
   </div>
 );

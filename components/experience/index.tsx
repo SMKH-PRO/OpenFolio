@@ -1,20 +1,26 @@
+import { experienceSection } from "../../config";
 import Container from "../container";
 import Timeline from "./timeline";
 
 const Experience = () => (
   <div id="experience">
     <Container className="mt-32 flex flex-col justify-center items-center">
-      <p className="text-primary-800 font-bold text-center text-xl">
-        Education & Experience
-      </p>
-      <p className="text-6xl font-bold text-center josefinSans mt-6 uppercase">
-        My Resume
-      </p>
-      <p className="text-slate-500 max-w-[600px] text-center">
-        {" "}
-        There are many variations of passages of Lorem Ipsum available but the
-        majority have suffered alteration in some form.
-      </p>
+      {experienceSection.title && (
+        <p className="text-primary-800 font-bold text-center text-xl">
+          {experienceSection.title}
+        </p>
+      )}
+      {experienceSection.heading && (
+        <p className="text-6xl font-bold text-center josefinSans mt-6 uppercase">
+          {experienceSection.heading}
+        </p>
+      )}
+
+      {experienceSection.description && (
+        <p className="text-slate-500 max-w-[600px] text-center">
+          {experienceSection.description}
+        </p>
+      )}
       <div className="mt-10">
         <Timeline />
       </div>

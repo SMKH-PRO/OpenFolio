@@ -9,6 +9,7 @@ import DownloadResumeBtn from "./downloadBtn";
 import MenuIcon from "../svgs/menuIcon";
 import theme from "../../theme.json";
 import XIcon from "../svgs/xIcon";
+import { generalInfo } from "../../config";
 
 const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,9 +39,9 @@ const NavMenu = () => {
           }`}
         >
           <div className="flex align-center justify-center items-center">
-            <Image src="/assets/images/avatar.png" width={40} height={45} />
+            <Image src={generalInfo.projectLogo} width={40} height={45} />
             <h1 className="m-3 text-2xl md:text-3xl   font-extrabold transition-all  duration-1000 ease-out">
-              OpenFolio
+              {generalInfo.projectName}
             </h1>
           </div>
 

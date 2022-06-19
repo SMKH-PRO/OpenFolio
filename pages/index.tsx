@@ -4,46 +4,38 @@ import About from "../components/about";
 import Introduction from "../components/introduction";
 import Portfolio from "../components/portfolio/index";
 import Experience from "../components/experience";
-import { contactSection, introSection } from "../config";
+import {
+  contactSection,
+  introSection,
+  generalInfo,
+  footerSection,
+  experienceSection,
+  aboutSection,
+  portfolioSection,
+} from "../config";
 import Contact from "../components/contact/index";
+import Footer from "../components/footer";
 
 const Home: NextPage = () => (
   <div>
     <Head>
-      <title>OpenFolio - Portfolio for everyone.</title>
-      <meta
-        name="description"
-        content="OpenFolio - an open source portfolio project for developers, designers and everyone"
-      />
+      <title>{generalInfo.seoTitle}</title>
+      <meta name="description" content={generalInfo.seoDescription} />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <main>
       {introSection.display && <Introduction />}
-      <About />
-      <Portfolio />
-      <Experience />
-      <div className="w-full border-t border-primary-100 my-20" />
-      {contactSection.display && (
-        <div>
-          <Contact />
-          <div className="w-full border-t border-primary-100 my-24" />
-        </div>
+      {aboutSection.display && <About />}
+      {portfolioSection.display && <Portfolio />}
+      {experienceSection.display && (
+        <>
+          <Experience />
+          <div className="w-full border-t border-primary-100 my-20" />
+        </>
       )}
-      <h1 className="text-center text-4xl josefinSans">UNDER CONSTRUCTION</h1>
-      <p className="text-center">
-        This open source portfolio is still undercontruction, To get updates
-        follow{" "}
-        <a
-          target="_blank"
-          href="https://github.com/smkh-pro/openfolio"
-          rel="noreferrer"
-          className="text-primary-800 underline"
-        >
-          this repo
-        </a>
-      </p>
-      <div className="w-full border-t border-primary-100 my-24" />
+      {contactSection.display && <Contact />}
+      {footerSection.display && <Footer />}
     </main>
 
     {/* <footer className={styles.footer}>

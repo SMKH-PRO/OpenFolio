@@ -3,6 +3,7 @@ import Container from "../container";
 
 import Shapes from "../shapes";
 import Carousel from "./carousel";
+import { portfolioSection } from "../../config";
 
 const Portfolio = () => (
   <div
@@ -25,12 +26,16 @@ const Portfolio = () => (
       />
     </span>
     <Container className="py-32">
-      <p className="text-center font-bold text-primary-900 text-xl">
-        Creative Work
-      </p>
-      <h4 className="mt-6 font-bold text-4xl text-center josefinSans">
-        RECENT PROJECTS
-      </h4>
+      {portfolioSection.title && (
+        <p className="text-center font-bold text-primary-900 text-xl">
+          {portfolioSection.title}
+        </p>
+      )}
+      {portfolioSection.heading && (
+        <h4 className="mt-6 font-bold text-4xl text-center josefinSans">
+          {portfolioSection.heading}
+        </h4>
+      )}
       <Carousel />
     </Container>
   </div>

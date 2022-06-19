@@ -3,7 +3,9 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 import styles from "../../styles/portfolio.module.css";
 import IconButton from "../buttons/iconButton";
+import { portfolioSection } from "../../config";
 
+const { projects } = portfolioSection;
 const Carousel = () => (
   <div className="my-20 drop-shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
     <Swiper
@@ -44,14 +46,11 @@ const Carousel = () => (
         },
       }}
     >
-      {new Array(6).fill(5).map((a, i) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <SwiperSlide key={`portfolio ${i}`}>
+      {projects.map((a, i) => (
+        <SwiperSlide key={`portfolio_${i}`}>
           <div
             style={{
-              backgroundImage: `url('/assets/images/portfolio/portfolio-${
-                i + 1
-              }.jpg')`,
+              backgroundImage: `url('${a.image}')`,
             }}
             className={`
             ${styles.overlay}
@@ -71,10 +70,12 @@ const Carousel = () => (
           >
             <div className="absolute z-10 bottom-[15px] hidden group-hover:flex w-full  p-5 justify-between">
               <div>
-                <h4 className="text-white drop-shadow-md	 font-bold">
-                  Mobile UI Design
-                </h4>
-                <p className="text-white">Dolar repellendus temporibus...</p>
+                {a.title && (
+                  <h4 className="text-white drop-shadow-md	 font-bold">
+                    {a.title}
+                  </h4>
+                )}
+                {a.description && <p className="text-white">{a.description}</p>}
               </div>
               <span>
                 <IconButton
