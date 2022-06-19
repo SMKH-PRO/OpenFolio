@@ -1,4 +1,8 @@
-import type { IconButtonType, IntroSectionType } from "./config.types";
+import type {
+  IconButtonType,
+  IntroSectionType,
+  AboutSectionType,
+} from "./config.types";
 import ReactNativeIcon from "./components/svgs/reactNativeIcon";
 import TypescriptIcon from "./components/svgs/typescriptIcon";
 import MongoDBIcon from "./components/svgs/mongoDBIcon";
@@ -73,7 +77,7 @@ const skills: IconButtonType[] = [
   },
 ];
 
-export const aboutSection = {
+export const aboutSection: AboutSectionType = {
   title: "About Me",
   heading: "I design web and mobile apps",
   description:

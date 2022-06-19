@@ -35,6 +35,24 @@ type IntroSectionType = {
   btn1: BtnType;
   btn2: BtnType;
 };
-export type { IntroSectionType, IconButtonType };
+
+type AboutSectionType = {
+  title: string;
+  heading: string;
+  description: string;
+  connectWithMe: {
+    title: string;
+    description: string;
+    socialMedia: IconButtonType[];
+  };
+  mySkills: {
+    skills: IconButtonType[];
+    title: string;
+    heading: string;
+    btn: BtnType;
+    description: string;
+  };
+};
+export type { IntroSectionType, IconButtonType, AboutSectionType };
 
 export default {};

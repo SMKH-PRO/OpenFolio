@@ -42,7 +42,10 @@ const Header = () => (
               {introSection.btn1.fontAwesome && (
                 <FontAwesomeIcon
                   className="ml-3 w-[16px]"
-                  icon={["fas", introSection.btn1.fontAwesome]}
+                  icon={[
+                    introSection.btn1.fontAwesomeType || "fas",
+                    introSection.btn1.fontAwesome,
+                  ]}
                 />
               )}
             </Button>
