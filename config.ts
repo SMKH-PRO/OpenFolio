@@ -281,7 +281,7 @@ export const footerSection: FooterSectionType = {
   bioData: {
     display: true,
     name: "Kashan Haider",
-    email: "Contact@KashanHaider.com",
+    email: "contact@KashanHaider.com",
     phone: "+1 (567)-257-8716",
   },
 };

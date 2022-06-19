@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import Container from "../container";
 
 import IconButton from "../buttons/iconButton";
@@ -6,7 +7,6 @@ import Button from "../buttons/button";
 import CardWrapper from "./cardWrapper";
 
 import { aboutSection, generalInfo } from "../../config";
-import Link from "next/link";
 
 const { connectWithMe, mySkills } = aboutSection;
 const { skills, featuredSkills } = mySkills;
