@@ -21,7 +21,8 @@ const Home: NextPage = () => (
     <Head>
       <title>{generalInfo.seoTitle}</title>
       <meta name="description" content={generalInfo.seoDescription} />
-      <link rel="icon" href="/favicon.ico" />
+      <meta name="keywords" content={generalInfo.seoKeywords} />
+      <link rel="icon" href="/assets/avatar.png" type="image/png" />
     </Head>
 
     <main>

@@ -116,6 +116,7 @@ type FooterSectionType = {
 type GeneralInfoType = {
   projectName: string | "OpenFolio";
   seoTitle: string | "OpenFolio - Portfolio for everyone.";
+  seoKeywords: string;
   seoDescription: string;
   projectLogo: string;
   resumeURL: string;

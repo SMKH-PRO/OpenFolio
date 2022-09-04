@@ -288,7 +288,8 @@ export const footerSection: FooterSectionType = {
 
 export const generalInfo: GeneralInfoType = {
   projectName: "OpenFolio",
-  seoTitle: "OpenFolio - Portfolio for everyone.",
+  seoTitle: "OpenFolio - Open Source Portfolio for everyone.",
+  seoKeywords: "Open Source Portfolio, portfolio, openfolio",
   seoDescription:
     "OpenFolio - an open source portfolio project for developers, designers and everyone",
   projectLogo: "/assets/images/avatar.png",
