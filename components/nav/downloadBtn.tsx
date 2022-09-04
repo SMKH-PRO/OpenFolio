@@ -8,8 +8,8 @@ type Props = {
   label?: string;
 };
 const DownloadResumeBtn = ({ className, label }: Props) => (
-  <Link href={generalInfo.resumeURL} download target="_blank">
-    <a target="_blank">
+  <Link href={generalInfo.resumeURL} target="_blank">
+    <a target="_blank" download>
       <Button className={`flex justify-between ${className || ""}`}>
         {label}
         <FontAwesomeIcon
