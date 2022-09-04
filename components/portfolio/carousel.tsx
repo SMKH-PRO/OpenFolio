@@ -1,6 +1,6 @@
+import { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
-
 import styles from "../../styles/portfolio.module.css";
 import IconButton from "../buttons/iconButton";
 import { portfolioSection } from "../../config";
@@ -46,13 +46,15 @@ const Carousel = () => (
         },
       }}
     >
-      {projects.map((a, i) => (
-        <SwiperSlide key={`portfolio_${i}`}>
-          <div
-            style={{
-              backgroundImage: `url('${a.image}')`,
-            }}
-            className={`
+      {useMemo(
+        () =>
+          projects.map((a, i) => (
+            <SwiperSlide key={`portfolio_${i}`}>
+              <div
+                style={{
+                  backgroundImage: `url('${a.image}')`,
+                }}
+                className={`
             ${styles.overlay}
         
           mt-2
@@ -67,31 +69,35 @@ const Carousel = () => (
           bg-no-repeat
           bg-cover
           `}
-          >
-            <div className="absolute z-10 bottom-[15px] hidden group-hover:flex w-full  p-5 justify-between">
-              <div>
-                {a.title && (
-                  <h4 className="text-white drop-shadow-md	 font-bold">
-                    {a.title}
-                  </h4>
-                )}
-                {a.description && <p className="text-white">{a.description}</p>}
-              </div>
-              <span>
-                <IconButton
-                  colorClass="
+              >
+                <div className="absolute z-10 bottom-[15px] hidden group-hover:flex w-full  p-5 justify-between">
+                  <div>
+                    {a.title && (
+                      <h4 className="text-white drop-shadow-md	 font-bold">
+                        {a.title}
+                      </h4>
+                    )}
+                    {a.description && (
+                      <p className="text-white">{a.description}</p>
+                    )}
+                  </div>
+                  <span>
+                    <IconButton
+                      colorClass="
                      bg-white
                      hover:bg-primary-500
                   "
-                  customIconClass="text-slate-700 hover:text-white"
-                  fontAwesome="arrow-right"
-                  fontAwesomeType="fas"
-                />
-              </span>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
+                      customIconClass="text-slate-700 hover:text-white"
+                      fontAwesome="arrow-right"
+                      fontAwesomeType="fas"
+                    />
+                  </span>
+                </div>
+              </div>
+            </SwiperSlide>
+          )),
+        []
+      )}
     </Swiper>
   </div>
 );

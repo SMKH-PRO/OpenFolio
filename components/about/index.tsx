@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Container from "../container";
@@ -12,8 +13,12 @@ const { connectWithMe, mySkills } = aboutSection;
 const { skills, featuredSkills } = mySkills;
 const { socialMedia } = connectWithMe;
 const FeaturedSkillCards = (array: typeof featuredSkills[0]) =>
-  array.map((d) => (
-    <CardWrapper titleClass={d.titleClass} title={d.title}>
+  array.map((d, i) => (
+    <CardWrapper
+      key={`${d?.title}${i}`}
+      titleClass={d.titleClass}
+      title={d.title}
+    >
       {"Svg" in d && (
         <d.Svg
           pathProps={{
@@ -53,50 +58,37 @@ const About = () => (
         {connectWithMe.description}
       </p>
       <div className="flex mt-6 flex-wrap">
-        {socialMedia?.map(({ link, className, ...options }, i) => (
-          <a // eslint-disable-next-line react/no-array-index-key
-            key={`${link || ""}_${i}`}
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconButton
-              className={`
+        {useMemo(
+          () =>
+            socialMedia?.map(({ link, className, ...options }, i) => (
+              <a // eslint-disable-next-line react/no-array-index-key
+                key={`${link || ""}_${i}`}
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconButton
+                  className={`
               m-1 mt-0
               
               ${className || "p-3"}
               `}
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              {...options}
-            />
-          </a>
-        ))}
+                  // eslint-disable-next-line react/jsx-props-no-spreading
+                  {...options}
+                />
+              </a>
+            )),
+          []
+        )}
       </div>
     </div>
 
     <div className="flex w-full mt-32 flex-wrap md:flex-wrap sm:flex-wrap lg:flex-nowrap  ">
       <div className="flex lg:justify-start md:justify-center sm:justify-center transition-all lg:mt-[-50px] xl:mt-[-80px] duration-1000 ease-out   columns-2 lg:basis-1/2 md:basis-full sm:basis-full ">
         <div className="transition-all duration-1000 ease-out  mt-[-50px] ">
-          {FeaturedSkillCards(featuredSkills[0])}
+          {useMemo(() => FeaturedSkillCards(featuredSkills[0]), [])}
         </div>
-        <div>
-          {FeaturedSkillCards(featuredSkills[1])}
-
-          {/* <CardWrapper title="React.JS">
-            <ReactIcon
-              pathProps={{
-                className: " group-hover:fill-white ",
-              }}
-            />
-          </CardWrapper>
-          <CardWrapper titleClass="mt-3" title="React Native">
-            <ReactNativeIcon
-              pathProps={{
-                className: " group-hover:fill-white ",
-              }}
-            />
-          </CardWrapper> */}
-        </div>
+        <div>{useMemo(() => FeaturedSkillCards(featuredSkills[1]), [])}</div>
       </div>
       <div className=" lg:basis-1/2 basis-full md:basis-full sm:basis-full">
         <h4 className="text-primary-800 font-bold text-xl uppercase">

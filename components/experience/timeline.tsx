@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { experienceSection } from "../../config";
 import TimelineItem from "./timelineItem";
 
@@ -39,14 +40,18 @@ const Timeline = () => (
 
        "
     >
-      {experiences.map((options, i) => (
-        <TimelineItem
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...options}
-          key={`${options.title}_${i}`}
-          right={i % 2 !== 0}
-        />
-      ))}
+      {useMemo(
+        () =>
+          experiences.map((options, i) => (
+            <TimelineItem
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              {...options}
+              key={`${options.title}_${i}`}
+              right={i % 2 !== 0}
+            />
+          )),
+        []
+      )}
     </div>
   </div>
 );
