@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image";
+import Image, { ImageProps } from "./Image";
 import styles from "../styles/shapes.module.css";
 import DesignLines from "./svgs/designLine";
 

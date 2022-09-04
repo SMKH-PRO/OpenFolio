@@ -1,11 +1,11 @@
 import { Fragment } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import paths from "../../utilities/paths";
 import Container from "../container";
 import { generalInfo, footerSection } from "../../config";
 import IconButton from "../buttons/iconButton";
+import Image from "../Image";
 
 const { socialMedia } = footerSection;
 const Footer = () => (

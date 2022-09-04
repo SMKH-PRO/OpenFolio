@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -10,6 +9,7 @@ import MenuIcon from "../svgs/menuIcon";
 import theme from "../../theme.json";
 import XIcon from "../svgs/xIcon";
 import { generalInfo } from "../../config";
+import Image from "../Image";
 
 const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);

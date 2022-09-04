@@ -1,6 +1,6 @@
-import Image from "next/image";
 import FloatingImages from "./floatingImages";
 import RoundShape from "../svgs/roundShape";
+import Image from "../Image";
 
 const headerRight2 = () => (
   <>

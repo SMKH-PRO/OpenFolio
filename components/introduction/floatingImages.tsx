@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../Image";
 import styles from "../../styles/header.module.css";
 
 const styledBox = `

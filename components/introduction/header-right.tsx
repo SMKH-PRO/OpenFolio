@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Typed from "react-typed";
 import { introSection } from "../../config";
+import Image from "../Image";
 
 const HeaderRight = () => (
   <div className="border-primary-100 border block p-5 px-7 sm:mt-32 md:mt-0">
