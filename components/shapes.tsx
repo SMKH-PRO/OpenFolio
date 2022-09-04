@@ -36,8 +36,8 @@ type Props = {
 const shapes = ({ noLine }: Props) => (
   <div>
     {!noLine && <DesignLines className="mt-20 left-[-66px] top-0" />}
-    {shapesArr.map((shape) => (
-      <span key={shape.src} className={shape.className}>
+    {shapesArr.map((shape, i) => (
+      <span key={`${shape.src}${i}`} className={shape.className}>
         <Image
           loading="lazy"
           alt="shape"

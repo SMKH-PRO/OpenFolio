@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +20,7 @@ const Footer = () => (
         </div>
         <div className="sm:block block md:flex lg:flex justify-center items-center">
           {paths.map((d, i) => (
-            <>
+            <Fragment key={`${d?.href || d?.title}${i}`}>
               <Link href={d.href}>
                 <a
                   className="
@@ -42,7 +43,7 @@ const Footer = () => (
                   |
                 </span>
               )}
-            </>
+            </Fragment>
           ))}
         </div>
         {footerSection.bioData.display && (

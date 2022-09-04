@@ -14,9 +14,9 @@ const Introduction = () => (
       </div>
       <div className="lg:basis-1/2  md:basis-none sm:basis-full">
         <p className="text-primary-900">{introSection.greetingMessage}</p>
-        <h2 className="mt-3 text-6xl font-extrabold transition-all  duration-1000 ease-out">
+        <h1 className="mt-3 text-6xl font-extrabold transition-all  duration-1000 ease-out">
           {introSection.name}
-        </h2>
+        </h1>
         <p className="text-2xl mt-3 ">
           <span className="text-slate-400">
             {`${introSection.professionPrefix} `}
