@@ -120,8 +120,8 @@ const About = () => (
         </p>
 
         {mySkills.btn.display && (
-          <Link href={generalInfo.resumeURL} download target="_blank">
-            <a target="_blank" download>
+          <Link href={generalInfo.resumeURL} target="_blank">
+            <a target="_blank">
               <Button className="mt-10 xl:mt-16 flex justify-center items-center">
                 {mySkills.btn.text}
                 <FontAwesomeIcon
