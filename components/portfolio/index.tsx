@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Container from "../container";
-
 import Shapes from "../shapes";
 import Carousel from "./carousel";
 import { portfolioSection } from "../../config";
+import Image from "../Image";
 
 const Portfolio = () => (
   <div
