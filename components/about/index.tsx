@@ -12,7 +12,7 @@ import { aboutSection, generalInfo } from "../../config";
 const { connectWithMe, mySkills } = aboutSection;
 const { skills, featuredSkills } = mySkills;
 const { socialMedia } = connectWithMe;
-const FeaturedSkillCards = (array: typeof featuredSkills[0]) =>
+const FeaturedSkillCards = (array: (typeof featuredSkills)[0]) =>
   array.map((d, i) => (
     <CardWrapper
       key={`${d?.title}${i}`}
