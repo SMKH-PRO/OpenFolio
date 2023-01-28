@@ -39,7 +39,12 @@ const NavMenu = () => {
           }`}
         >
           <div className="flex align-center justify-center items-center">
-            <Image src={generalInfo.projectLogo} width={40} height={45} />
+            <Image
+              src={generalInfo.projectLogo}
+              width={40}
+              height={45}
+              alt="Project-Logo"
+            />
             <h1 className="m-3 text-2xl md:text-3xl   font-extrabold transition-all  duration-1000 ease-out">
               {generalInfo.projectName}
             </h1>

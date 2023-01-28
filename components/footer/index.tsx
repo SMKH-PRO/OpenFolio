@@ -13,7 +13,12 @@ const Footer = () => (
     <Container>
       <div className="py-20">
         <div className="flex justify-center items-center mb-5">
-          <Image src={generalInfo.projectLogo} width={40} height={45} />
+          <Image
+            src={generalInfo.projectLogo}
+            width={40}
+            height={45}
+            alt="logo"
+          />
           <h1 className="m-3 text-2xl md:text-4xl   font-extrabold transition-all  duration-1000 ease-out">
             {generalInfo.projectName}
           </h1>

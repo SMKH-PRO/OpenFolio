@@ -12,6 +12,7 @@ const headerRight2 = () => (
         src="/assets/images/programmer.png"
         width={420}
         height={500}
+        alt="Programmer"
       />
     </span>
     <RoundShape className="h-[100%] max-w-[96vw]" />

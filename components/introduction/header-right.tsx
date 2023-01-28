@@ -9,6 +9,7 @@ const HeaderRight = () => (
       width={350}
       height={320}
       objectFit="contain"
+      alt="MainPicture"
     />
     <div className="flex justify-between items-center mt-3">
       <p className="font-semibold text-primary-800 text-2xl">[</p>

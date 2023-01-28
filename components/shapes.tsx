@@ -11,22 +11,27 @@ const shapesArr: Shapes[] = [
   {
     src: "/assets/images/shapes/shape-1.png",
     className: styles.element1,
+    alt: "Shape",
   },
   {
     src: "/assets/images/shapes/shape-2.png",
     className: styles.element2,
+    alt: "Shape",
   },
   {
     src: "/assets/images/shapes/shape-3.png",
     className: styles.element3,
+    alt: "Shape",
   },
   {
     src: "/assets/images/shapes/shape-4.png",
     className: styles.element4,
+    alt: "Shape",
   },
   {
     src: "/assets/images/shapes/shape-5.png",
     className: styles.element5,
+    alt: "Shape",
   },
 ];
 
@@ -40,7 +45,7 @@ const shapes = ({ noLine }: Props) => (
       <span key={`${shape.src}${i}`} className={shape.className}>
         <Image
           loading="lazy"
-          alt="shape"
+          alt={shape?.alt || "shape"}
           width={41}
           height={43}
           src={shape.src}

@@ -15,6 +15,7 @@ const Portfolio = () => (
         src="/assets/images/shapes/dotted-design.png"
         width={300}
         height={300}
+        alt="shape"
       />
     </span>
     <span className="absolute bottom-0 rotate-[180deg] right-0 drop-shadow-[0_0_2px_black]">
@@ -22,6 +23,7 @@ const Portfolio = () => (
         src="/assets/images/shapes/dotted-design.png"
         width={300}
         height={300}
+        alt="shape"
       />
     </span>
     <Container className="py-32">
