@@ -112,20 +112,20 @@ const About = () => (
         </p>
 
         {mySkills.btn.display && (
-          <Link href={generalInfo.resumeURL} target="_blank">
-            <a target="_blank">
-              <Button className="mt-10 xl:mt-16 flex justify-center items-center">
-                {mySkills.btn.text}
-                <FontAwesomeIcon
-                  className="ml-3 w-[15px]"
-                  icon={[
-                    mySkills.btn.fontAwesomeType || "fas",
-                    mySkills.btn.fontAwesome || "file-download",
-                  ]}
-                />
-              </Button>
-            </a>
-          </Link>
+          (<Link href={generalInfo.resumeURL} target="_blank">
+
+            <Button className="mt-10 xl:mt-16 flex justify-center items-center">
+              {mySkills.btn.text}
+              <FontAwesomeIcon
+                className="ml-3 w-[15px]"
+                icon={[
+                  mySkills.btn.fontAwesomeType || "fas",
+                  mySkills.btn.fontAwesome || "file-download",
+                ]}
+              />
+            </Button>
+
+          </Link>)
         )}
       </div>
     </div>

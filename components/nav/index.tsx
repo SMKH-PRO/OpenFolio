@@ -72,16 +72,16 @@ const NavMenu = () => {
                   key={path.href}
                   className="lg:mx-6 md:mx-4 mx-2 my-4 md:my-0 animate__animated animate__faster animate__fadeInDown"
                 >
-                  <Link href={path.href}>
-                    <a
-                      className={`${
-                        router.pathname === path.href
-                          ? "text-primary-500 font-bold"
-                          : ""
-                      }`}
-                    >
-                      {path.title}
-                    </a>
+                  <Link
+                    href={path.href}
+                    className={`${
+                      router.pathname === path.href
+                        ? "text-primary-500 font-bold"
+                        : ""
+                    }`}>
+
+                    {path.title}
+
                   </Link>
                 </li>
               ))}

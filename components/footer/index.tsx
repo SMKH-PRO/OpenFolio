@@ -26,22 +26,22 @@ const Footer = () => (
         <div className="sm:block block md:flex lg:flex justify-center items-center">
           {paths.map((d, i) => (
             <Fragment key={`${d?.href || d?.title}${i}`}>
-              <Link href={d.href}>
-                <a
-                  className="
-                text-center
-                p-1 
-                m-3
-                sm:block
-                block
-                md:inline
-                hover:font-bold
-              
-                 hover:underline 
-                 hover:text-primary-900"
-                >
-                  {d.title}
-                </a>
+              <Link
+                href={d.href}
+                className="
+              text-center
+              p-1 
+              m-3
+              sm:block
+              block
+              md:inline
+              hover:font-bold
+            
+               hover:underline 
+               hover:text-primary-900">
+
+                {d.title}
+
               </Link>
               {i + 1 !== paths.length && (
                 <span className="text-gray-300 text-[24px] mt-[-2px] sm:hidden hidden md:flex">
@@ -53,55 +53,55 @@ const Footer = () => (
         </div>
         {footerSection.bioData.display && (
           <div className="flex flex-wrap md:flex sm:block justify-center items-center">
-            <Link href="#home">
-              <a
-                className="
-                text-center
-                p-1 
-                m-1
-                sm:block
-                block
-                md:inline
-                font-bold
-                text-slate-300
-                 hover:text-primary-900"
-              >
-                {footerSection.bioData.name}
-              </a>
+            <Link
+              href="#home"
+              className="
+              text-center
+              p-1 
+              m-1
+              sm:block
+              block
+              md:inline
+              font-bold
+              text-slate-300
+               hover:text-primary-900">
+
+              {footerSection.bioData.name}
+
             </Link>
 
-            <Link href={`mailto:${footerSection.bioData.email}`}>
-              <a
-                className="
-                text-center
-                p-1 
-                m-1
-                sm:block
-                block
-                md:inline
-                font-bold
-                text-slate-300
-                 hover:text-primary-900"
-              >
-                {footerSection.bioData.email}
-              </a>
+            <Link
+              href={`mailto:${footerSection.bioData.email}`}
+              className="
+              text-center
+              p-1 
+              m-1
+              sm:block
+              block
+              md:inline
+              font-bold
+              text-slate-300
+               hover:text-primary-900">
+
+              {footerSection.bioData.email}
+
             </Link>
 
-            <Link href={`tel:${footerSection.bioData.phone}`}>
-              <a
-                className="
-                text-center
-                p-1 
-                m-1
-                sm:block
-                block
-                md:inline
-                font-bold
-    text-slate-300
-                 hover:text-primary-900"
-              >
-                {footerSection.bioData.phone}
-              </a>
+            <Link
+              href={`tel:${footerSection.bioData.phone}`}
+              className="
+              text-center
+              p-1 
+              m-1
+              sm:block
+              block
+              md:inline
+              font-bold
+  text-slate-300
+               hover:text-primary-900">
+
+              {footerSection.bioData.phone}
+
             </Link>
           </div>
         )}
@@ -137,11 +137,13 @@ const Footer = () => (
         />
         &nbsp; &nbsp;
         <p className="ml-2">by</p>&nbsp;
-        <Link target="_blank" href="https://github.com/SMKH-PRO/OpenFolio">
-          <a target="_blank" className="text-primary-800 underline">
-            {" "}
-            OpenFolio{" "}
-          </a>
+        <Link
+          target="_blank"
+          href="https://github.com/SMKH-PRO/OpenFolio"
+          className="text-primary-800 underline">
+
+          {" "}OpenFolio{" "}
+
         </Link>
         &nbsp;
         <p> team. </p>

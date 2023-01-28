@@ -110,8 +110,8 @@ const timelineItem = ({
        "
         >
           {orgLink ? (
-            <Link href={orgLink}>
-              <a className="underline hover:text-primary-800">{org || ""}</a>
+            <Link href={orgLink} className="underline hover:text-primary-800">
+              {org || ""}
             </Link>
           ) : (
             org || ""

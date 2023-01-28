@@ -8,17 +8,17 @@ type Props = {
   label?: string;
 };
 const DownloadResumeBtn = ({ className, label }: Props) => (
-  <Link href={generalInfo.resumeURL} target="_blank">
-    <a target="_blank">
-      <Button className={`flex justify-between ${className || ""}`}>
-        {label}
-        <FontAwesomeIcon
-          className="ml-3 w-[15px]"
-          icon={["fas", "file-download"]}
-        />
-      </Button>
-    </a>
-  </Link>
+  (<Link href={generalInfo.resumeURL} target="_blank">
+
+    <Button className={`flex justify-between ${className || ""}`}>
+      {label}
+      <FontAwesomeIcon
+        className="ml-3 w-[15px]"
+        icon={["fas", "file-download"]}
+      />
+    </Button>
+
+  </Link>)
 );
 DownloadResumeBtn.defaultProps = {
   className: "hidden",
