@@ -78,10 +78,9 @@ const NavMenu = () => {
                       router.pathname === path.href
                         ? "text-primary-500 font-bold"
                         : ""
-                    }`}>
-
+                    }`}
+                  >
                     {path.title}
-
                   </Link>
                 </li>
               ))}

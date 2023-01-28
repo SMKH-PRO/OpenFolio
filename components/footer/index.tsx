@@ -38,10 +38,9 @@ const Footer = () => (
               hover:font-bold
             
                hover:underline 
-               hover:text-primary-900">
-
+               hover:text-primary-900"
+              >
                 {d.title}
-
               </Link>
               {i + 1 !== paths.length && (
                 <span className="text-gray-300 text-[24px] mt-[-2px] sm:hidden hidden md:flex">
@@ -64,10 +63,9 @@ const Footer = () => (
               md:inline
               font-bold
               text-slate-300
-               hover:text-primary-900">
-
+               hover:text-primary-900"
+            >
               {footerSection.bioData.name}
-
             </Link>
 
             <Link
@@ -81,10 +79,9 @@ const Footer = () => (
               md:inline
               font-bold
               text-slate-300
-               hover:text-primary-900">
-
+               hover:text-primary-900"
+            >
               {footerSection.bioData.email}
-
             </Link>
 
             <Link
@@ -98,10 +95,9 @@ const Footer = () => (
               md:inline
               font-bold
   text-slate-300
-               hover:text-primary-900">
-
+               hover:text-primary-900"
+            >
               {footerSection.bioData.phone}
-
             </Link>
           </div>
         )}
@@ -140,10 +136,10 @@ const Footer = () => (
         <Link
           target="_blank"
           href="https://github.com/SMKH-PRO/OpenFolio"
-          className="text-primary-800 underline">
-
-          {" "}OpenFolio{" "}
-
+          className="text-primary-800 underline"
+        >
+          {" "}
+          OpenFolio{" "}
         </Link>
         &nbsp;
         <p> team. </p>

@@ -112,8 +112,7 @@ const About = () => (
         </p>
 
         {mySkills.btn.display && (
-          (<Link href={generalInfo.resumeURL} target="_blank">
-
+          <Link href={generalInfo.resumeURL} target="_blank">
             <Button className="mt-10 xl:mt-16 flex justify-center items-center">
               {mySkills.btn.text}
               <FontAwesomeIcon
@@ -124,8 +123,7 @@ const About = () => (
                 ]}
               />
             </Button>
-
-          </Link>)
+          </Link>
         )}
       </div>
     </div>
