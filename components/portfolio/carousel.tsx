@@ -4,9 +4,14 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import styles from "../../styles/portfolio.module.css";
 import IconButton from "../buttons/iconButton";
 import { portfolioSection } from "../../config";
+import { Project } from "../../config.types";
 
 const { projects } = portfolioSection;
-const Carousel = () => (
+const Carousel = ({
+  handleOpenModal,
+}: {
+  handleOpenModal?: (project: Project) => void;
+}) => (
   <div className="my-20 drop-shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
     <Swiper
       // install Swiper modules
@@ -52,7 +57,7 @@ const Carousel = () => (
             <SwiperSlide key={`portfolio_${i}`}>
               <div
                 style={{
-                  backgroundImage: `url('${a.image}')`,
+                  backgroundImage: `url('${a.image?.[0]}')`,
                 }}
                 className={`
             ${styles.overlay}
@@ -78,11 +83,14 @@ const Carousel = () => (
                       </h4>
                     )}
                     {a.description && (
-                      <p className="text-white">{a.description}</p>
+                      <p className="text-white text-ellipsis line-clamp-4 overflow-hidden">
+                        {a.description}
+                      </p>
                     )}
                   </div>
                   <span>
                     <IconButton
+                      onClick={() => handleOpenModal?.(a)}
                       colorClass="
                      bg-white
                      hover:bg-primary-500
@@ -96,7 +104,7 @@ const Carousel = () => (
               </div>
             </SwiperSlide>
           )),
-        []
+        [handleOpenModal]
       )}
     </Swiper>
   </div>

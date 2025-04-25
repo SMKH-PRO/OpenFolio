@@ -75,11 +75,13 @@ type ContactSectionType = {
   description?: string;
 };
 
-type Project = {
+export type Project = {
   title?: string;
   description?: string;
-  image: string;
+  image: string[];
+  link?: string;
 };
+
 type PortfolioSectionType = {
   display: boolean;
   title?: string | "Creative Work";
