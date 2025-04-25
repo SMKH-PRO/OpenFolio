@@ -11,6 +11,7 @@ type Props = {
   fontAwesomeType?: IconPrefix;
   colorClass?: string;
   customIconClass?: string;
+  onClick?: () => void;
 };
 
 const IconButton = ({
@@ -21,6 +22,7 @@ const IconButton = ({
   colorClass,
   fontAwesome,
   customIconClass,
+  onClick,
 }: Props) => {
   const cClass =
     colorClass ||
@@ -49,6 +51,7 @@ const IconButton = ({
     
     `}
       type="button"
+      onClick={onClick}
     >
       {Svg && (
         <Svg
